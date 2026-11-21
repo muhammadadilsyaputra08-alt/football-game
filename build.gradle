@@ -168,10 +168,14 @@ project(':android') {
                 def m = (jar.name =~ /natives-([A-Za-z0-9_\-]+?)\.jar$/)
                 if (!m.find()) return
                 def abi = m.group(1)
+                // PENTING: pakai path absolut. file() di dalam copy{} dihitung terhadap
+                // proyek ROOT, sehingga .so sebelumnya masuk ke <root>/libs, bukan android/libs.
+                def target = new File(nativesDir, abi)
+                target.mkdirs()
                 copy {
                     from zipTree(jar)
                     include '**/*.so'          // .so bisa di root atau di subfolder
-                    into file("libs/${abi}")
+                    into target
                     includeEmptyDirs = false
                     eachFile { it.path = it.name }   // ratakan
                 }

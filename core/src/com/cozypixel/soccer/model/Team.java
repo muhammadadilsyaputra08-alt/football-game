@@ -22,7 +22,7 @@ public class Team {
 
     public Player getPlayer(String id) {
         for (Player p : ownedPlayers) {
-            if (p.id.equals(id)) return p;
+            if (p.id != null && p.id.equals(id)) return p;
         }
         return null;
     }

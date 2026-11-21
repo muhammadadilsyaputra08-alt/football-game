@@ -62,3 +62,9 @@
 - **Android CI**: `android-actions/setup-android@v3` gagal (`sdkmanager tools` → "Failed to find package 'tools'") → diganti SDK bawaan runner + `platforms;android-34`.
 - `continue-on-error` dihapus dari packaging/APK agar kegagalan tidak tersembunyi; `gradlew` + wrapper jar ditambahkan.
 - Ikon app baru (pixel art, palet STYLE_DNA): `Branding/App_Icon_*`, `android/res/mipmap-*` (adaptive, round, monochrome), ikon window desktop.
+
+## Perbaikan UI & Stabilitas (22 Nov 2026)
+- `SkinFactory` kini mendaftarkan ScrollPaneStyle (sebelumnya menu **Players** crash: "No ScrollPaneStyle registered"), gaya tombol disabled yang jelas, font Nearest (tidak blur).
+- Skin dibuat sekali di `PixelSoccerGame`; pindah layar lewat `game.go()` (ditunda + dispose layar lama) — tidak ada lagi kebocoran Skin/Stage.
+- Semua layar memakai `BaseScreen` (ExtendViewport, area scroll, tombol Back Android) sehingga konten tidak terpotong.
+- Tombol yang sebelumnya placeholder kini berfungsi: Training (koin + peluang +1 stat), Settings (Sound/Music/Vibration + reset data), Team (kapten, ganti pemain bench), Tournament (peluang menang berdasar OVR tim), Shop/Players (status & pesan jelas).

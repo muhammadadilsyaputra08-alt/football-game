@@ -5,6 +5,9 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.assets.AssetManager;
+import com.badlogic.gdx.Screen;
+import com.badlogic.gdx.scenes.scene2d.ui.Skin;
+import com.cozypixel.soccer.util.SkinFactory;
 import com.cozypixel.soccer.model.SaveData;
 import com.cozypixel.soccer.model.Team;
 import com.cozypixel.soccer.model.Player;
@@ -28,6 +31,7 @@ public class PixelSoccerGame extends Game {
     public SaveData saveData;
     public Team playerTeam;
     public AssetLoader assetLoader;
+    public Skin skin;
 
     // Resolusi virtual (landscape)
     public static final int V_WIDTH = 640;
@@ -61,6 +65,7 @@ public class PixelSoccerGame extends Game {
     private void init() {
         batch = new SpriteBatch();
         font = new BitmapFont(); // diganti pixel font nanti
+        skin = SkinFactory.create(); // dibuat sekali, dipakai semua layar
         assets = new AssetManager();
         assetLoader = new AssetLoader(assets);
 
@@ -149,6 +154,24 @@ public class PixelSoccerGame extends Game {
         return team;
     }
 
+    /** Pindah layar dengan aman: ditunda ke frame berikutnya (di luar dispatch event stage), lalu layar lama di-dispose. */
+    public void go(final Screen next) {
+        Gdx.app.postRunnable(new Runnable() {
+            @Override public void run() {
+                Screen old = getScreen();
+                setScreen(next);
+                if (old != null && old != next) old.dispose();
+            }
+        });
+    }
+
+    public void resetGame() {
+        SaveManager.deleteSave();
+        saveData = createNewGame();
+        SaveManager.save(saveData);
+        playerTeam = buildTeamFromSave(saveData);
+    }
+
     public void saveGame() {
         // Sync team -> saveData
         saveData.ownedPlayers = playerTeam.ownedPlayers;
@@ -165,5 +188,6 @@ public class PixelSoccerGame extends Game {
         if (batch != null) batch.dispose();
         if (font != null) font.dispose();
         if (assets != null) assets.dispose();
+        if (skin != null) skin.dispose();
     }
 }

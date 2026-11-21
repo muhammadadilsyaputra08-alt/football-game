@@ -1,13 +1,7 @@
 package com.cozypixel.soccer.screen;
 
-import com.badlogic.gdx.Gdx;
-import com.badlogic.gdx.ScreenAdapter;
-import com.badlogic.gdx.graphics.GL20;
-import com.badlogic.gdx.scenes.scene2d.Stage;
-import com.badlogic.gdx.scenes.scene2d.ui.*;
-import com.badlogic.gdx.scenes.scene2d.utils.ChangeListener;
-import com.badlogic.gdx.scenes.scene2d.Actor;
-import com.badlogic.gdx.utils.viewport.FitViewport;
+import com.badlogic.gdx.graphics.Color;
+import com.badlogic.gdx.scenes.scene2d.ui.TextButton;
 import com.cozypixel.soccer.PixelSoccerGame;
 import com.cozypixel.soccer.model.Player;
 
@@ -15,60 +9,46 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Shop — recruitment dengan rotasi stok.
- * Leon (Rare GK), Rafael (Epic ST), Kai (Legendary CAM).
+ * Shop — recruitment. Leon (Rare GK), Rafael (Epic ST), Kai (Legendary CAM).
  */
-public class ShopScreen extends ScreenAdapter {
-    private final PixelSoccerGame game;
-    private Stage stage;
-    private Skin skin;
+public class ShopScreen extends BaseScreen {
+    private final List<Player> recruits = createRecruits();
 
     public ShopScreen(PixelSoccerGame game) {
-        this.game = game;
-        stage = new Stage(new FitViewport(PixelSoccerGame.V_WIDTH, PixelSoccerGame.V_HEIGHT), game.batch);
-        Gdx.input.setInputProcessor(stage);
-        skin = com.cozypixel.soccer.util.SkinFactory.create();
+        super(game, new Color(0.25f, 0.2f, 0.3f, 1f));
+        frame("RECRUITMENT SHOP");
+        refresh();
+    }
 
-        Table root = new Table();
-        root.setFillParent(true);
-        stage.addActor(root);
-
-        root.add(new Label("RECRUITMENT SHOP", skin)).pad(12).row();
-        root.add(new Label("Koin: " + game.saveData.club.coins, skin)).padBottom(10).row();
-
-        List<Player> recruits = createRecruits();
-        for (Player r : recruits) {
-            boolean alreadyOwned = game.playerTeam.getPlayer(r.id) != null;
-            String info = String.format("%s — %s\n%s · %s · MaxLv %d · %s\nPassive: %s\nHarga: %d koin",
-                    r.name, r.title != null ? r.title : "",
-                    r.rarity, r.position, r.maxLevel, r.job,
+    private void refresh() {
+        final int coins = game.saveData.club.coins;
+        infoLabel.setText("Koin: " + coins + "   (dapat koin dari Training & Tournament)");
+        content.clear();
+        for (final Player r : recruits) {
+            boolean owned = game.playerTeam.getPlayer(r.id) != null;
+            boolean poor = coins < r.price;
+            String tag = owned ? "[OWNED] " : poor ? "[KOIN KURANG] " : "RECRUIT ";
+            String info = String.format("%s%s - %s\n%s | %s | MaxLv %d\nPassive: %s\nHarga: %d koin",
+                    tag, r.name, r.title != null ? r.title : "",
+                    r.rarity, r.position, r.maxLevel,
                     r.passive != null ? r.passive : "-", r.price);
-
-            TextButton btn = new TextButton(
-                    (alreadyOwned ? "[OWNED] " : "RECRUIT ") + info, skin);
-            btn.setDisabled(alreadyOwned || game.saveData.club.coins < r.price);
-
-            final Player recruit = r;
-            btn.addListener(new ChangeListener() {
-                @Override public void changed(ChangeEvent e, Actor a) {
-                    if (game.playerTeam.recruit(recruit, game.saveData.club.coins)) {
-                        game.saveData.club.coins -= recruit.price;
-                        game.saveGame();
-                        Gdx.app.log("Shop", "Recruited " + recruit.name);
-                        game.setScreen(new ShopScreen(game)); // refresh
-                    }
-                }
+            TextButton btn = button(info, new Runnable() {
+                @Override public void run() { recruit(r); }
             });
-            root.add(btn).width(360).height(70).pad(4).row();
+            btn.setDisabled(owned || poor);
+            content.add(btn).width(360).height(84).row();
         }
+    }
 
-        TextButton back = new TextButton("Kembali", skin);
-        back.addListener(new ChangeListener() {
-            @Override public void changed(ChangeEvent e, Actor a) {
-                game.setScreen(new MainMenuScreen(game));
-            }
-        });
-        root.add(back).padTop(12);
+    private void recruit(Player r) {
+        if (game.playerTeam.recruit(r, game.saveData.club.coins)) {
+            game.saveData.club.coins -= r.price;
+            game.saveGame();
+            refresh();
+            say(r.name + " bergabung! (masuk bench, atur di menu Team)");
+        } else {
+            say("Gagal merekrut " + r.name);
+        }
     }
 
     private List<Player> createRecruits() {
@@ -118,14 +98,4 @@ public class ShopScreen extends ScreenAdapter {
 
         return list;
     }
-
-    @Override public void render(float delta) {
-        Gdx.gl.glClearColor(0.25f, 0.2f, 0.3f, 1);
-        Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
-        stage.act(delta);
-        stage.draw();
-    }
-
-    @Override public void resize(int w, int h) { stage.getViewport().update(w, h, true); }
-    @Override public void dispose() { stage.dispose(); skin.dispose(); }
 }

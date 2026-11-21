@@ -1,88 +1,97 @@
 package com.cozypixel.soccer.screen;
 
-import com.badlogic.gdx.Gdx;
-import com.badlogic.gdx.ScreenAdapter;
-import com.badlogic.gdx.graphics.GL20;
-import com.badlogic.gdx.scenes.scene2d.Stage;
-import com.badlogic.gdx.scenes.scene2d.ui.*;
-import com.badlogic.gdx.scenes.scene2d.utils.ChangeListener;
-import com.badlogic.gdx.scenes.scene2d.Actor;
-import com.badlogic.gdx.utils.viewport.FitViewport;
+import com.badlogic.gdx.graphics.Color;
+import com.badlogic.gdx.scenes.scene2d.ui.Label;
+import com.badlogic.gdx.scenes.scene2d.ui.Table;
 import com.cozypixel.soccer.PixelSoccerGame;
 import com.cozypixel.soccer.model.Player;
+import com.cozypixel.soccer.model.Team;
 
 /**
- * Team management — starting XI, bench, formation, captain.
+ * Team — formasi, Starting XI (tap = jadikan kapten), bench (tombol "Masuk XI").
  */
-public class TeamScreen extends ScreenAdapter {
-    private final PixelSoccerGame game;
-    private Stage stage;
-    private Skin skin;
+public class TeamScreen extends BaseScreen {
+    private static final String[] FORMATIONS = {"4-3-3", "4-4-2", "4-2-3-1", "3-5-2"};
 
     public TeamScreen(PixelSoccerGame game) {
-        this.game = game;
-        stage = new Stage(new FitViewport(PixelSoccerGame.V_WIDTH, PixelSoccerGame.V_HEIGHT), game.batch);
-        Gdx.input.setInputProcessor(stage);
-        skin = com.cozypixel.soccer.util.SkinFactory.create();
+        super(game, new Color(0.2f, 0.3f, 0.25f, 1f));
+        frame("TEAM");
+        refresh();
+    }
 
-        Table root = new Table();
-        root.setFillParent(true);
-        stage.addActor(root);
+    private void refresh() {
+        final Team team = game.playerTeam;
+        Player cap = team.getPlayer(team.captainId);
+        infoLabel.setText("Formasi " + team.formation + "   |   Kapten: " + (cap != null ? cap.name : "-"));
+        content.clear();
 
-        root.add(new Label("TEAM — " + game.playerTeam.formation, skin)).pad(10).row();
-
-        // Starting XI
-        root.add(new Label("Starting XI:", skin)).left().row();
-        for (String id : game.playerTeam.startingXI) {
-            Player p = game.playerTeam.getPlayer(id);
-            if (p == null) continue;
-            String line = String.format("#%d %s (%s)  OVR %.0f  Lv%d",
-                    p.number, p.name, p.position, p.getOverall(), p.level);
-            root.add(new Label(line, skin)).left().padLeft(20).row();
-        }
-
-        // Bench
-        if (!game.playerTeam.bench.isEmpty()) {
-            root.add(new Label("Bench:", skin)).left().padTop(8).row();
-            for (String id : game.playerTeam.bench) {
-                Player p = game.playerTeam.getPlayer(id);
-                if (p == null) continue;
-                root.add(new Label("  " + p.name + " (" + p.position + ")", skin)).left().padLeft(20).row();
-            }
-        }
-
-        // Formation selector (alpha simple)
         Table formRow = new Table();
-        for (String f : new String[]{"4-3-3", "4-4-2", "4-2-3-1", "3-5-2"}) {
-            TextButton b = new TextButton(f, skin);
-            final String form = f;
-            b.addListener(new ChangeListener() {
-                @Override public void changed(ChangeEvent e, Actor a) {
-                    game.playerTeam.formation = form;
+        for (final String f : FORMATIONS) {
+            boolean current = f.equals(team.formation);
+            formRow.add(button(current ? "* " + f + " *" : f, new Runnable() {
+                @Override public void run() {
+                    team.formation = f;
                     game.saveGame();
-                    game.setScreen(new TeamScreen(game));
+                    say("Formasi diubah ke " + f);
+                    refresh();
                 }
-            });
-            formRow.add(b).pad(4);
+            })).width(110).height(32).pad(3);
         }
-        root.add(formRow).padTop(12).row();
+        content.add(formRow).row();
 
-        TextButton back = new TextButton("Kembali", skin);
-        back.addListener(new ChangeListener() {
-            @Override public void changed(ChangeEvent e, Actor a) {
-                game.setScreen(new MainMenuScreen(game));
+        content.add(new Label("Starting XI  (tap pemain = jadikan kapten)", skin, "dim")).padTop(6).row();
+        for (final Player p : team.getStartingPlayers()) {
+            boolean isCap = p.id.equals(team.captainId);
+            String line = String.format("#%d %s (%s)  OVR %.0f  Lv%d%s",
+                    p.number, p.name, p.position, p.getOverall(), p.level, isCap ? "  (C)" : "");
+            content.add(button(line, new Runnable() {
+                @Override public void run() {
+                    team.captainId = p.id;
+                    game.saveGame();
+                    say(p.name + " menjadi kapten");
+                    refresh();
+                }
+            })).width(380).height(28).row();
+        }
+
+        if (!team.bench.isEmpty()) {
+            content.add(new Label("Bench", skin, "dim")).padTop(8).row();
+            for (String id : team.bench) {
+                final Player b = team.getPlayer(id);
+                if (b == null) continue;
+                Table row = new Table();
+                row.add(new Label(String.format("%s (%s)  OVR %.0f  Lv%d", b.name, b.position, b.getOverall(), b.level), skin))
+                        .width(250).left();
+                row.add(button("Masuk XI", new Runnable() {
+                    @Override public void run() { benchIn(b); }
+                })).width(110).height(28);
+                content.add(row).row();
             }
-        });
-        root.add(back).padTop(16);
+        }
     }
 
-    @Override public void render(float delta) {
-        Gdx.gl.glClearColor(0.2f, 0.3f, 0.25f, 1);
-        Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
-        stage.act(delta);
-        stage.draw();
+    /** Ganti starter berposisi sama; jika tidak ada, starter dengan OVR terendah dengan peran sama (GK/outfield). */
+    private void benchIn(Player in) {
+        Team t = game.playerTeam;
+        Player out = null;
+        for (Player s : t.getStartingPlayers()) {
+            if (s.position != null && s.position.equals(in.position)) { out = s; break; }
+        }
+        if (out == null) {
+            float low = Float.MAX_VALUE;
+            for (Player s : t.getStartingPlayers()) {
+                if (s.isGK() != in.isGK()) continue;
+                if (s.getOverall() < low) { low = s.getOverall(); out = s; }
+            }
+        }
+        if (out == null) {
+            say("Tidak ada pemain yang cocok untuk diganti");
+            return;
+        }
+        t.swapToStarting(in.id, out.id);
+        if (out.id.equals(t.captainId)) t.captainId = in.id;
+        game.saveGame();
+        say(in.name + " masuk menggantikan " + out.name);
+        refresh();
     }
-
-    @Override public void resize(int w, int h) { stage.getViewport().update(w, h, true); }
-    @Override public void dispose() { stage.dispose(); skin.dispose(); }
 }

@@ -23,6 +23,11 @@ public class SaveData {
 
     public Progress progress = new Progress();
 
+    // Settings
+    public boolean soundOn = true;
+    public boolean musicOn = true;
+    public boolean vibrationOn = true;
+
     // Shop rotation (4 pemain per refresh)
     public List<String> shopStock = new ArrayList<>();
     public long lastShopRefresh = 0;

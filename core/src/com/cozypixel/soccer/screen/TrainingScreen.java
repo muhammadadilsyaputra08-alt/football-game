@@ -1,71 +1,59 @@
 package com.cozypixel.soccer.screen;
 
-import com.badlogic.gdx.Gdx;
-import com.badlogic.gdx.ScreenAdapter;
-import com.badlogic.gdx.graphics.GL20;
-import com.badlogic.gdx.scenes.scene2d.Stage;
-import com.badlogic.gdx.scenes.scene2d.ui.*;
-import com.badlogic.gdx.scenes.scene2d.utils.ChangeListener;
-import com.badlogic.gdx.scenes.scene2d.Actor;
-import com.badlogic.gdx.utils.viewport.FitViewport;
+import com.badlogic.gdx.graphics.Color;
+import com.badlogic.gdx.math.MathUtils;
 import com.cozypixel.soccer.PixelSoccerGame;
+import com.cozypixel.soccer.model.Player;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
- * Mode Training — mini games: Shooting, Passing, Dribbling, GK, Free Kick, Penalty.
- * Tidak ada energi/tiket. XP kecil.
+ * Training — tiap drill memberi koin + peluang +1 statistik pemain XI yang relevan.
  */
-public class TrainingScreen extends ScreenAdapter {
-    private final PixelSoccerGame game;
-    private Stage stage;
-    private Skin skin;
+public class TrainingScreen extends BaseScreen {
+    // {nama, stat, tipe}
+    private static final String[][] DRILLS = {
+        {"Shooting Practice", "Shooting", "out"},
+        {"Passing Practice", "Passing", "out"},
+        {"Dribbling Course", "Dribbling", "out"},
+        {"Goalkeeper Practice", "Reflex", "gk"},
+        {"Free Kick", "Shooting", "out"},
+        {"Penalty Practice", "Shooting", "out"}
+    };
 
     public TrainingScreen(PixelSoccerGame game) {
-        this.game = game;
-        stage = new Stage(new FitViewport(PixelSoccerGame.V_WIDTH, PixelSoccerGame.V_HEIGHT), game.batch);
-        Gdx.input.setInputProcessor(stage);
-        skin = com.cozypixel.soccer.util.SkinFactory.create();
+        super(game, new Color(0.2f, 0.4f, 0.25f, 1f));
+        frame("TRAINING GROUND");
+        refresh();
+    }
 
-        Table root = new Table();
-        root.setFillParent(true);
-        stage.addActor(root);
-
-        root.add(new Label("TRAINING GROUND", skin)).pad(20).row();
-
-        String[] drills = {
-            "Shooting Practice", "Passing Practice", "Dribbling Course",
-            "Goalkeeper Practice", "Free Kick", "Penalty Practice"
-        };
-        for (String d : drills) {
-            TextButton btn = new TextButton(d, skin);
-            final String drill = d;
-            btn.addListener(new ChangeListener() {
-                @Override public void changed(ChangeEvent e, Actor a) {
-                    // TODO: launch mini-game screen
-                    Gdx.app.log("Training", "Start: " + drill);
-                    // Untuk alpha, kasih XP dummy
-                    game.saveData.progress.matchesPlayed++; // placeholder
-                    game.saveGame();
-                }
-            });
-            root.add(btn).width(220).pad(6).row();
+    private void refresh() {
+        infoLabel.setText("Koin: " + game.saveData.club.coins + "   (tanpa energi / tiket)");
+        content.clear();
+        for (final String[] d : DRILLS) {
+            content.add(button(d[0] + "   [" + d[1] + "]", new Runnable() {
+                @Override public void run() { runDrill(d[0], d[1], "gk".equals(d[2])); }
+            })).width(320).height(38).row();
         }
-
-        TextButton back = new TextButton("Kembali", skin);
-        back.addListener(new ChangeListener() {
-            @Override public void changed(ChangeEvent e, Actor a) {
-                game.setScreen(new MainMenuScreen(game));
-            }
-        });
-        root.add(back).padTop(20);
     }
 
-    @Override public void render(float delta) {
-        Gdx.gl.glClearColor(0.2f, 0.4f, 0.25f, 1);
-        Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
-        stage.act(delta);
-        stage.draw();
-    }
+    private void runDrill(String name, String stat, boolean gk) {
+        int coins = 20 + MathUtils.random(0, 15);
+        game.saveData.club.coins += coins;
+        String msg = name + " selesai! +" + coins + " koin";
 
-    @Override public void resize(int w, int h) { stage.getViewport().update(w, h, true); }
-    @Override public void dispose() { stage.dispose(); skin.dispose(); }
+        List<Player> pool = new ArrayList<>();
+        for (Player p : game.playerTeam.getStartingPlayers()) {
+            if (p.isGK() == gk) pool.add(p);
+        }
+        if (!pool.isEmpty() && MathUtils.randomBoolean(0.4f)) {
+            Player target = pool.get(MathUtils.random(pool.size() - 1));
+            target.setStat(stat, target.getStat(stat) + 1);
+            msg += "  |  " + target.name + " " + stat + " +1";
+        }
+        game.saveGame();
+        refresh();
+        say(msg);
+    }
 }

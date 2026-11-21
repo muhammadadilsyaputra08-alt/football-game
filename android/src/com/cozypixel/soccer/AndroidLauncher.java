@@ -1,9 +1,7 @@
 package com.cozypixel.soccer;
 
-import android.graphics.Color;
+import android.content.Intent;
 import android.os.Bundle;
-import android.widget.ScrollView;
-import android.widget.TextView;
 import com.badlogic.gdx.backends.android.AndroidApplication;
 import com.badlogic.gdx.backends.android.AndroidApplicationConfiguration;
 
@@ -12,10 +10,12 @@ import java.io.StringWriter;
 
 /**
  * Android entry point — landscape, immersive.
- * Jika inisialisasi gagal (mis. native .so tidak ter-package), error ditampilkan
- * di layar alih-alih force close.
+ * Jika initialize() gagal, error asli dikirim ke CrashActivity lalu Activity di-finish()
+ * (kalau tidak, onResume() -> NPE menutupi error asli).
  */
 public class AndroidLauncher extends AndroidApplication {
+    private boolean ready = false;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,18 +25,28 @@ public class AndroidLauncher extends AndroidApplication {
             config.useAccelerometer = false;
             config.useCompass = false;
             initialize(new PixelSoccerGame(), config);
+            ready = true;
         } catch (Throwable t) {
             StringWriter sw = new StringWriter();
             t.printStackTrace(new PrintWriter(sw));
-            TextView tv = new TextView(this);
-            tv.setText("PIXEL SOCCER - STARTUP ERROR\n\n" + sw);
-            tv.setTextColor(Color.WHITE);
-            tv.setBackgroundColor(Color.rgb(64, 13, 20));
-            tv.setTextSize(11f);
-            tv.setPadding(16, 16, 16, 16);
-            ScrollView sv = new ScrollView(this);
-            sv.addView(tv);
-            setContentView(sv);
+            Intent i = new Intent(this, CrashActivity.class);
+            i.putExtra(CrashActivity.EXTRA_REPORT,
+                    "STARTUP (initialize) FAILED\nABI " + android.os.Build.SUPPORTED_ABIS[0]
+                            + "\n\n" + sw);
+            i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+            startActivity(i);
+            finish();
         }
+    }
+
+    // Setelah finish() di onCreate, Android tidak memanggil onResume; guard ini hanya jaring pengaman.
+    @Override protected void onResume() {
+        if (ready) super.onResume();
+    }
+    @Override protected void onPause() {
+        if (ready) super.onPause();
+    }
+    @Override protected void onDestroy() {
+        try { super.onDestroy(); } catch (Throwable ignored) { }
     }
 }

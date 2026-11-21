@@ -145,6 +145,13 @@ jobs:
             gradle :android:assembleDebug --no-daemon --stacktrace
           fi
 
+      - name: Verify native libs inside APK
+        run: |
+          APK="$(ls android/build/outputs/apk/debug/*.apk | head -n 1)"
+          echo "APK: $APK"
+          unzip -l "$APK" | grep -E 'lib/(arm64-v8a|armeabi-v7a)/libgdx.so' \
+            || { echo "::error::libgdx.so tidak ada di APK"; exit 1; }
+
       - name: Upload APK
         uses: actions/upload-artifact@v4
         if: success()

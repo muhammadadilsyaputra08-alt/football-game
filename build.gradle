@@ -153,31 +153,36 @@ project(':android') {
         natives "com.badlogicgames.gdx:gdx-box2d-platform:$gdxVersion:natives-x86_64"
     }
 
-    // Copy natives
+    // Copy natives (libgdx.so, libgdx-box2d.so) ke android/libs/<abi>/ sebelum build apa pun.
+    // FIX: sebelumnya hanya dikaitkan ke merge*JniLibFolders dan .so tidak ikut ter-package
+    // => "UnsatisfiedLinkError: library libgdx.so not found" saat startup.
     tasks.register('copyAndroidNatives') {
-        doFirst {
-            file('libs/armeabi-v7a/').mkdirs()
-            file('libs/arm64-v8a/').mkdirs()
-            file('libs/x86/').mkdirs()
-            file('libs/x86_64/').mkdirs()
-            configurations.natives.copy().files.each { jar ->
-                def outputDir = null
-                if (jar.name.endsWith('natives-armeabi-v7a.jar')) outputDir = file('libs/armeabi-v7a')
-                if (jar.name.endsWith('natives-arm64-v8a.jar')) outputDir = file('libs/arm64-v8a')
-                if (jar.name.endsWith('natives-x86.jar')) outputDir = file('libs/x86')
-                if (jar.name.endsWith('natives-x86_64.jar')) outputDir = file('libs/x86_64')
-                if (outputDir != null) {
-                    copy {
-                        from zipTree(jar)
-                        into outputDir
-                        include '*.so'
+        def nativesDir = file('libs')
+        inputs.files(configurations.natives)
+        outputs.dir(nativesDir)
+        doLast {
+            delete nativesDir
+            ['armeabi-v7a', 'arm64-v8a', 'x86', 'x86_64'].each { abi ->
+                file("libs/${abi}").mkdirs()
+                configurations.natives.files.each { jar ->
+                    if (jar.name.endsWith("natives-${abi}.jar")) {
+                        copy {
+                            from zipTree(jar)
+                            into file("libs/${abi}")
+                            include '*.so'
+                        }
                     }
                 }
             }
+            def soCount = fileTree(nativesDir).matching { include '**/*.so' }.files.size()
+            if (soCount == 0) {
+                throw new GradleException('copyAndroidNatives: tidak ada .so yang tersalin (natives tidak ter-resolve)')
+            }
+            logger.lifecycle("copyAndroidNatives: ${soCount} file .so disalin")
         }
     }
-    tasks.matching { it.name.contains('merge') && it.name.contains('JniLibFolders') }.configureEach {
-        dependsOn 'copyAndroidNatives'
+    afterEvaluate {
+        tasks.named('preBuild') { dependsOn 'copyAndroidNatives' }
     }
 }
 

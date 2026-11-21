@@ -53,7 +53,8 @@ public class Player {
     }
 
     public float getStat(String key) {
-        return stats.getOrDefault(key, 50f);
+        Float v = stats.get(key);
+        return v != null ? v : 50f;
     }
 
     public void setStat(String key, float value) {

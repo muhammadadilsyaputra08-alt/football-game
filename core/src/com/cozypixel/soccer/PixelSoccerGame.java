@@ -11,6 +11,7 @@ import com.cozypixel.soccer.model.Player;
 import com.cozypixel.soccer.util.SaveManager;
 import com.cozypixel.soccer.util.AssetLoader;
 import com.cozypixel.soccer.screen.MainMenuScreen;
+import com.cozypixel.soccer.screen.ErrorScreen;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -34,6 +35,30 @@ public class PixelSoccerGame extends Game {
 
     @Override
     public void create() {
+        try {
+            init();
+        } catch (Throwable t) {
+            showError(t);
+        }
+    }
+
+    @Override
+    public void render() {
+        try {
+            super.render();
+        } catch (Throwable t) {
+            if (getScreen() instanceof ErrorScreen) throw new RuntimeException(t);
+            showError(t);
+        }
+    }
+
+    private void showError(Throwable t) {
+        Gdx.app.error("PixelSoccer", "Fatal error", t);
+        Gdx.input.setInputProcessor(null);
+        setScreen(new ErrorScreen(t));
+    }
+
+    private void init() {
         batch = new SpriteBatch();
         font = new BitmapFont(); // diganti pixel font nanti
         assets = new AssetManager();
@@ -136,9 +161,9 @@ public class PixelSoccerGame extends Game {
 
     @Override
     public void dispose() {
-        batch.dispose();
-        font.dispose();
-        assets.dispose();
         if (getScreen() != null) getScreen().dispose();
+        if (batch != null) batch.dispose();
+        if (font != null) font.dispose();
+        if (assets != null) assets.dispose();
     }
 }

@@ -41,7 +41,7 @@ public class TournamentScreen extends ScreenAdapter {
             final String cup = CUPS[i];
             final int idx = i;
             boolean unlocked = Boolean.TRUE.equals(game.saveData.tournamentsUnlocked.get(cup));
-            String best = game.saveData.bestResults.getOrDefault(cup, "-");
+            String best = (game.saveData.bestResults.containsKey(cup) ? game.saveData.bestResults.get(cup) : "-");
 
             TextButton btn = new TextButton(
                     cup + " (" + TEAM_COUNTS[i] + " tim)\nBest: " + best + (unlocked ? "" : "  [LOCKED]"),

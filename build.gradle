@@ -162,23 +162,27 @@ project(':android') {
         outputs.dir(nativesDir)
         doLast {
             delete nativesDir
-            ['armeabi-v7a', 'arm64-v8a', 'x86', 'x86_64'].each { abi ->
-                file("libs/${abi}").mkdirs()
-                configurations.natives.files.each { jar ->
-                    if (jar.name.endsWith("natives-${abi}.jar")) {
-                        copy {
-                            from zipTree(jar)
-                            into file("libs/${abi}")
-                            include '*.so'
-                        }
-                    }
+            def jars = configurations.natives.files.toList()
+            jars.each { jar ->
+                // nama jar: gdx-platform-1.12.1-natives-arm64-v8a.jar
+                def m = (jar.name =~ /natives-([A-Za-z0-9_\-]+?)\.jar$/)
+                if (!m.find()) return
+                def abi = m.group(1)
+                copy {
+                    from zipTree(jar)
+                    include '**/*.so'          // .so bisa di root atau di subfolder
+                    into file("libs/${abi}")
+                    includeEmptyDirs = false
+                    eachFile { it.path = it.name }   // ratakan
                 }
             }
-            def soCount = fileTree(nativesDir).matching { include '**/*.so' }.files.size()
-            if (soCount == 0) {
-                throw new GradleException('copyAndroidNatives: tidak ada .so yang tersalin (natives tidak ter-resolve)')
+            def sos = fileTree(nativesDir).matching { include '**/*.so' }.files
+            logger.lifecycle("copyAndroidNatives: jars=${jars*.name}")
+            logger.lifecycle("copyAndroidNatives: so=${sos.collect { it.parentFile.name + '/' + it.name }}")
+            if (sos.isEmpty()) {
+                def entries = jars.collect { j -> j.name + ' -> ' + zipTree(j).files.collect { it.name }.take(8) }
+                throw new GradleException("copyAndroidNatives: tidak ada .so. Jar ter-resolve: ${entries}")
             }
-            logger.lifecycle("copyAndroidNatives: ${soCount} file .so disalin")
         }
     }
     afterEvaluate {

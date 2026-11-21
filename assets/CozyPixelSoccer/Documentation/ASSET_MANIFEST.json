@@ -1,0 +1,3339 @@
+{
+ "generated": "2026-11-21",
+ "count": 447,
+ "assets": [
+  {
+   "path": "Characters/Default_Players/GK/Player_GK.png",
+   "size": [
+    128,
+    640
+   ],
+   "category": "Characters"
+  },
+  {
+   "path": "Characters/Default_Players/GK/Player_GK.json",
+   "size": null,
+   "category": "Data"
+  },
+  {
+   "path": "Characters/Default_Players/GK/Player_GK_portrait.png",
+   "size": [
+    64,
+    64
+   ],
+   "category": "Characters"
+  },
+  {
+   "path": "Characters/Default_Players/GK/Player_GK_profile_icon.png",
+   "size": [
+    28,
+    28
+   ],
+   "category": "Characters"
+  },
+  {
+   "path": "Characters/Goalkeeper/Player_GK_sheet.png",
+   "size": [
+    128,
+    640
+   ],
+   "category": "Characters"
+  },
+  {
+   "path": "Characters/Goalkeeper/Player_GK_sheet.json",
+   "size": null,
+   "category": "Data"
+  },
+  {
+   "path": "Characters/Default_Players/RB/Player_RB.png",
+   "size": [
+    128,
+    1408
+   ],
+   "category": "Characters"
+  },
+  {
+   "path": "Characters/Default_Players/RB/Player_RB.json",
+   "size": null,
+   "category": "Data"
+  },
+  {
+   "path": "Characters/Default_Players/RB/Player_RB_portrait.png",
+   "size": [
+    64,
+    64
+   ],
+   "category": "Characters"
+  },
+  {
+   "path": "Characters/Default_Players/RB/Player_RB_profile_icon.png",
+   "size": [
+    28,
+    28
+   ],
+   "category": "Characters"
+  },
+  {
+   "path": "Characters/Default_Players/RB/Player_RB_away.png",
+   "size": [
+    128,
+    1408
+   ],
+   "category": "Characters"
+  },
+  {
+   "path": "Characters/Default_Players/CB/Player_CB_01.png",
+   "size": [
+    128,
+    1408
+   ],
+   "category": "Characters"
+  },
+  {
+   "path": "Characters/Default_Players/CB/Player_CB_01.json",
+   "size": null,
+   "category": "Data"
+  },
+  {
+   "path": "Characters/Default_Players/CB/Player_CB_01_portrait.png",
+   "size": [
+    64,
+    64
+   ],
+   "category": "Characters"
+  },
+  {
+   "path": "Characters/Default_Players/CB/Player_CB_01_profile_icon.png",
+   "size": [
+    28,
+    28
+   ],
+   "category": "Characters"
+  },
+  {
+   "path": "Characters/Default_Players/CB/Player_CB_01_away.png",
+   "size": [
+    128,
+    1408
+   ],
+   "category": "Characters"
+  },
+  {
+   "path": "Characters/Default_Players/CB/Player_CB_02.png",
+   "size": [
+    128,
+    1408
+   ],
+   "category": "Characters"
+  },
+  {
+   "path": "Characters/Default_Players/CB/Player_CB_02.json",
+   "size": null,
+   "category": "Data"
+  },
+  {
+   "path": "Characters/Default_Players/CB/Player_CB_02_portrait.png",
+   "size": [
+    64,
+    64
+   ],
+   "category": "Characters"
+  },
+  {
+   "path": "Characters/Default_Players/CB/Player_CB_02_profile_icon.png",
+   "size": [
+    28,
+    28
+   ],
+   "category": "Characters"
+  },
+  {
+   "path": "Characters/Default_Players/CB/Player_CB_02_away.png",
+   "size": [
+    128,
+    1408
+   ],
+   "category": "Characters"
+  },
+  {
+   "path": "Characters/Default_Players/LB/Player_LB.png",
+   "size": [
+    128,
+    1408
+   ],
+   "category": "Characters"
+  },
+  {
+   "path": "Characters/Default_Players/LB/Player_LB.json",
+   "size": null,
+   "category": "Data"
+  },
+  {
+   "path": "Characters/Default_Players/LB/Player_LB_portrait.png",
+   "size": [
+    64,
+    64
+   ],
+   "category": "Characters"
+  },
+  {
+   "path": "Characters/Default_Players/LB/Player_LB_profile_icon.png",
+   "size": [
+    28,
+    28
+   ],
+   "category": "Characters"
+  },
+  {
+   "path": "Characters/Default_Players/LB/Player_LB_away.png",
+   "size": [
+    128,
+    1408
+   ],
+   "category": "Characters"
+  },
+  {
+   "path": "Characters/Default_Players/CDM/Player_CDM.png",
+   "size": [
+    128,
+    1408
+   ],
+   "category": "Characters"
+  },
+  {
+   "path": "Characters/Default_Players/CDM/Player_CDM.json",
+   "size": null,
+   "category": "Data"
+  },
+  {
+   "path": "Characters/Default_Players/CDM/Player_CDM_portrait.png",
+   "size": [
+    64,
+    64
+   ],
+   "category": "Characters"
+  },
+  {
+   "path": "Characters/Default_Players/CDM/Player_CDM_profile_icon.png",
+   "size": [
+    28,
+    28
+   ],
+   "category": "Characters"
+  },
+  {
+   "path": "Characters/Default_Players/CDM/Player_CDM_away.png",
+   "size": [
+    128,
+    1408
+   ],
+   "category": "Characters"
+  },
+  {
+   "path": "Characters/Default_Players/CM/Player_CM.png",
+   "size": [
+    128,
+    1408
+   ],
+   "category": "Characters"
+  },
+  {
+   "path": "Characters/Default_Players/CM/Player_CM.json",
+   "size": null,
+   "category": "Data"
+  },
+  {
+   "path": "Characters/Default_Players/CM/Player_CM_portrait.png",
+   "size": [
+    64,
+    64
+   ],
+   "category": "Characters"
+  },
+  {
+   "path": "Characters/Default_Players/CM/Player_CM_profile_icon.png",
+   "size": [
+    28,
+    28
+   ],
+   "category": "Characters"
+  },
+  {
+   "path": "Characters/Default_Players/CM/Player_CM_away.png",
+   "size": [
+    128,
+    1408
+   ],
+   "category": "Characters"
+  },
+  {
+   "path": "Characters/Default_Players/CAM/Player_CAM.png",
+   "size": [
+    128,
+    1408
+   ],
+   "category": "Characters"
+  },
+  {
+   "path": "Characters/Default_Players/CAM/Player_CAM.json",
+   "size": null,
+   "category": "Data"
+  },
+  {
+   "path": "Characters/Default_Players/CAM/Player_CAM_portrait.png",
+   "size": [
+    64,
+    64
+   ],
+   "category": "Characters"
+  },
+  {
+   "path": "Characters/Default_Players/CAM/Player_CAM_profile_icon.png",
+   "size": [
+    28,
+    28
+   ],
+   "category": "Characters"
+  },
+  {
+   "path": "Characters/Default_Players/CAM/Player_CAM_away.png",
+   "size": [
+    128,
+    1408
+   ],
+   "category": "Characters"
+  },
+  {
+   "path": "Characters/Default_Players/RW/Player_RW.png",
+   "size": [
+    128,
+    1408
+   ],
+   "category": "Characters"
+  },
+  {
+   "path": "Characters/Default_Players/RW/Player_RW.json",
+   "size": null,
+   "category": "Data"
+  },
+  {
+   "path": "Characters/Default_Players/RW/Player_RW_portrait.png",
+   "size": [
+    64,
+    64
+   ],
+   "category": "Characters"
+  },
+  {
+   "path": "Characters/Default_Players/RW/Player_RW_profile_icon.png",
+   "size": [
+    28,
+    28
+   ],
+   "category": "Characters"
+  },
+  {
+   "path": "Characters/Default_Players/RW/Player_RW_away.png",
+   "size": [
+    128,
+    1408
+   ],
+   "category": "Characters"
+  },
+  {
+   "path": "Characters/Default_Players/ST/Player_ST.png",
+   "size": [
+    128,
+    1408
+   ],
+   "category": "Characters"
+  },
+  {
+   "path": "Characters/Default_Players/ST/Player_ST.json",
+   "size": null,
+   "category": "Data"
+  },
+  {
+   "path": "Characters/Default_Players/ST/Player_ST_portrait.png",
+   "size": [
+    64,
+    64
+   ],
+   "category": "Characters"
+  },
+  {
+   "path": "Characters/Default_Players/ST/Player_ST_profile_icon.png",
+   "size": [
+    28,
+    28
+   ],
+   "category": "Characters"
+  },
+  {
+   "path": "Characters/Default_Players/ST/Player_ST_away.png",
+   "size": [
+    128,
+    1408
+   ],
+   "category": "Characters"
+  },
+  {
+   "path": "Characters/Default_Players/LW/Player_LW.png",
+   "size": [
+    128,
+    1408
+   ],
+   "category": "Characters"
+  },
+  {
+   "path": "Characters/Default_Players/LW/Player_LW.json",
+   "size": null,
+   "category": "Data"
+  },
+  {
+   "path": "Characters/Default_Players/LW/Player_LW_portrait.png",
+   "size": [
+    64,
+    64
+   ],
+   "category": "Characters"
+  },
+  {
+   "path": "Characters/Default_Players/LW/Player_LW_profile_icon.png",
+   "size": [
+    28,
+    28
+   ],
+   "category": "Characters"
+  },
+  {
+   "path": "Characters/Default_Players/LW/Player_LW_away.png",
+   "size": [
+    128,
+    1408
+   ],
+   "category": "Characters"
+  },
+  {
+   "path": "Characters/Recruitable_Players/Leon/Player_Leon.png",
+   "size": [
+    128,
+    640
+   ],
+   "category": "Characters"
+  },
+  {
+   "path": "Characters/Recruitable_Players/Leon/Player_Leon.json",
+   "size": null,
+   "category": "Data"
+  },
+  {
+   "path": "Characters/Recruitable_Players/Leon/Player_Leon_portrait.png",
+   "size": [
+    64,
+    64
+   ],
+   "category": "Characters"
+  },
+  {
+   "path": "Characters/Recruitable_Players/Leon/Player_Leon_profile_icon.png",
+   "size": [
+    28,
+    28
+   ],
+   "category": "Characters"
+  },
+  {
+   "path": "Characters/Recruitable_Players/Leon/Card_Rare_Leon.png",
+   "size": [
+    80,
+    112
+   ],
+   "category": "Characters"
+  },
+  {
+   "path": "Characters/Recruitable_Players/Rafael/Player_Rafael.png",
+   "size": [
+    128,
+    1408
+   ],
+   "category": "Characters"
+  },
+  {
+   "path": "Characters/Recruitable_Players/Rafael/Player_Rafael.json",
+   "size": null,
+   "category": "Data"
+  },
+  {
+   "path": "Characters/Recruitable_Players/Rafael/Player_Rafael_portrait.png",
+   "size": [
+    64,
+    64
+   ],
+   "category": "Characters"
+  },
+  {
+   "path": "Characters/Recruitable_Players/Rafael/Player_Rafael_profile_icon.png",
+   "size": [
+    28,
+    28
+   ],
+   "category": "Characters"
+  },
+  {
+   "path": "Characters/Recruitable_Players/Rafael/Card_Epic_Rafael.png",
+   "size": [
+    80,
+    112
+   ],
+   "category": "Characters"
+  },
+  {
+   "path": "Characters/Recruitable_Players/Kai/Player_Kai.png",
+   "size": [
+    128,
+    1408
+   ],
+   "category": "Characters"
+  },
+  {
+   "path": "Characters/Recruitable_Players/Kai/Player_Kai.json",
+   "size": null,
+   "category": "Data"
+  },
+  {
+   "path": "Characters/Recruitable_Players/Kai/Player_Kai_portrait.png",
+   "size": [
+    64,
+    64
+   ],
+   "category": "Characters"
+  },
+  {
+   "path": "Characters/Recruitable_Players/Kai/Player_Kai_profile_icon.png",
+   "size": [
+    28,
+    28
+   ],
+   "category": "Characters"
+  },
+  {
+   "path": "Characters/Recruitable_Players/Kai/Card_Legendary_Kai.png",
+   "size": [
+    80,
+    112
+   ],
+   "category": "Characters"
+  },
+  {
+   "path": "Characters/Animations/ST_run_right.gif",
+   "size": [
+    128,
+    128
+   ],
+   "category": "Animations"
+  },
+  {
+   "path": "Characters/Animations/ST_shoot_right.gif",
+   "size": [
+    128,
+    128
+   ],
+   "category": "Animations"
+  },
+  {
+   "path": "Characters/Animations/ST_sprint_right.gif",
+   "size": [
+    128,
+    128
+   ],
+   "category": "Animations"
+  },
+  {
+   "path": "Characters/Animations/ST_celebrate.gif",
+   "size": [
+    128,
+    128
+   ],
+   "category": "Animations"
+  },
+  {
+   "path": "Characters/Animations/GK_dive_left_getup.gif",
+   "size": [
+    128,
+    128
+   ],
+   "category": "Animations"
+  },
+  {
+   "path": "Characters/Animations/GK_move_right.gif",
+   "size": [
+    128,
+    128
+   ],
+   "category": "Animations"
+  },
+  {
+   "path": "Characters/Cards/Player_Card_Common.png",
+   "size": [
+    80,
+    112
+   ],
+   "category": "Characters"
+  },
+  {
+   "path": "Characters/Cards/Player_Card_Rare.png",
+   "size": [
+    80,
+    112
+   ],
+   "category": "Characters"
+  },
+  {
+   "path": "Characters/Cards/Player_Card_Epic.png",
+   "size": [
+    80,
+    112
+   ],
+   "category": "Characters"
+  },
+  {
+   "path": "Characters/Cards/Player_Card_Legendary.png",
+   "size": [
+    80,
+    112
+   ],
+   "category": "Characters"
+  },
+  {
+   "path": "Characters/Cards/Player_Selection_Frame.png",
+   "size": [
+    84,
+    116
+   ],
+   "category": "Characters"
+  },
+  {
+   "path": "Characters/Cards/Example_Card_Common_Bagas.png",
+   "size": [
+    80,
+    112
+   ],
+   "category": "Characters"
+  },
+  {
+   "path": "Characters/Cards/Level_Badge.png",
+   "size": [
+    30,
+    12
+   ],
+   "category": "Characters"
+  },
+  {
+   "path": "Characters/Cards/Max_Level_Badge.png",
+   "size": [
+    30,
+    12
+   ],
+   "category": "Characters"
+  },
+  {
+   "path": "Characters/Cosmetics/Jersey_Home.png",
+   "size": [
+    32,
+    32
+   ],
+   "category": "Characters"
+  },
+  {
+   "path": "Characters/Cosmetics/Shorts_Home.png",
+   "size": [
+    16,
+    16
+   ],
+   "category": "Characters"
+  },
+  {
+   "path": "Characters/Cosmetics/Socks_Home.png",
+   "size": [
+    12,
+    16
+   ],
+   "category": "Characters"
+  },
+  {
+   "path": "Characters/Cosmetics/Jersey_Away.png",
+   "size": [
+    32,
+    32
+   ],
+   "category": "Characters"
+  },
+  {
+   "path": "Characters/Cosmetics/Shorts_Away.png",
+   "size": [
+    16,
+    16
+   ],
+   "category": "Characters"
+  },
+  {
+   "path": "Characters/Cosmetics/Socks_Away.png",
+   "size": [
+    12,
+    16
+   ],
+   "category": "Characters"
+  },
+  {
+   "path": "Characters/Cosmetics/Jersey_Gk.png",
+   "size": [
+    32,
+    32
+   ],
+   "category": "Characters"
+  },
+  {
+   "path": "Characters/Cosmetics/Shorts_Gk.png",
+   "size": [
+    16,
+    16
+   ],
+   "category": "Characters"
+  },
+  {
+   "path": "Characters/Cosmetics/Socks_Gk.png",
+   "size": [
+    12,
+    16
+   ],
+   "category": "Characters"
+  },
+  {
+   "path": "Characters/Cosmetics/Boots.png",
+   "size": [
+    18,
+    12
+   ],
+   "category": "Characters"
+  },
+  {
+   "path": "Characters/Cosmetics/Captain_Armband.png",
+   "size": [
+    18,
+    8
+   ],
+   "category": "Characters"
+  },
+  {
+   "path": "Characters/Cosmetics/Hair_Colors.png",
+   "size": [
+    86,
+    14
+   ],
+   "category": "Characters"
+  },
+  {
+   "path": "Characters/Cosmetics/Skin_Tones.png",
+   "size": [
+    50,
+    14
+   ],
+   "category": "Characters"
+  },
+  {
+   "path": "Characters/Cosmetics/Jersey_Numbers_3x5.png",
+   "size": [
+    50,
+    7
+   ],
+   "category": "Characters"
+  },
+  {
+   "path": "Characters/Cosmetics/cosmetic_palettes.json",
+   "size": null,
+   "category": "Data"
+  },
+  {
+   "path": "Characters/roster.json",
+   "size": null,
+   "category": "Data"
+  },
+  {
+   "path": "Environment/Stadium/Stadium_Day.png",
+   "size": [
+    640,
+    384
+   ],
+   "category": "Environment"
+  },
+  {
+   "path": "Environment/Stadium/Stadium_Sunset.png",
+   "size": [
+    640,
+    384
+   ],
+   "category": "Environment"
+  },
+  {
+   "path": "Environment/Stadium/Stadium_Night.png",
+   "size": [
+    640,
+    384
+   ],
+   "category": "Environment"
+  },
+  {
+   "path": "Environment/Training_Field/Training_Field.png",
+   "size": [
+    480,
+    270
+   ],
+   "category": "Environment"
+  },
+  {
+   "path": "Environment/Football_Field/Grass_Tileset_16x16.png",
+   "size": [
+    128,
+    16
+   ],
+   "category": "Environment"
+  },
+  {
+   "path": "Environment/Football_Field/Grass_Base.png",
+   "size": [
+    16,
+    16
+   ],
+   "category": "Environment"
+  },
+  {
+   "path": "Environment/Football_Field/Grass_Variation.png",
+   "size": [
+    16,
+    16
+   ],
+   "category": "Environment"
+  },
+  {
+   "path": "Environment/Football_Field/Grass_Light.png",
+   "size": [
+    16,
+    16
+   ],
+   "category": "Environment"
+  },
+  {
+   "path": "Environment/Football_Field/Grass_Dark.png",
+   "size": [
+    16,
+    16
+   ],
+   "category": "Environment"
+  },
+  {
+   "path": "Environment/Football_Field/Center_Line.png",
+   "size": [
+    2,
+    256
+   ],
+   "category": "Environment"
+  },
+  {
+   "path": "Environment/Football_Field/Center_Circle.png",
+   "size": [
+    84,
+    84
+   ],
+   "category": "Environment"
+  },
+  {
+   "path": "Environment/Football_Field/Penalty_Box.png",
+   "size": [
+    66,
+    146
+   ],
+   "category": "Environment"
+  },
+  {
+   "path": "Environment/Football_Field/Goal_Area.png",
+   "size": [
+    28,
+    78
+   ],
+   "category": "Environment"
+  },
+  {
+   "path": "Environment/Football_Field/Corner_Arc.png",
+   "size": [
+    16,
+    16
+   ],
+   "category": "Environment"
+  },
+  {
+   "path": "Environment/Football_Field/Touchline.png",
+   "size": [
+    16,
+    2
+   ],
+   "category": "Environment"
+  },
+  {
+   "path": "Environment/Football_Field/Goal_Line.png",
+   "size": [
+    2,
+    16
+   ],
+   "category": "Environment"
+  },
+  {
+   "path": "Environment/Football_Field/Corner_Mark.png",
+   "size": [
+    4,
+    10
+   ],
+   "category": "Environment"
+  },
+  {
+   "path": "Environment/Football_Field/Penalty_Spot.png",
+   "size": [
+    6,
+    6
+   ],
+   "category": "Environment"
+  },
+  {
+   "path": "Environment/Football_Field/Penalty_Arc.png",
+   "size": [
+    18,
+    40
+   ],
+   "category": "Environment"
+  },
+  {
+   "path": "Environment/Goals/Goal_Left_NetAnim_4f.png",
+   "size": [
+    120,
+    86
+   ],
+   "category": "Environment"
+  },
+  {
+   "path": "Environment/Goals/Goal_Right_NetAnim_4f.png",
+   "size": [
+    120,
+    86
+   ],
+   "category": "Environment"
+  },
+  {
+   "path": "Environment/Goals/Goal_Left.png",
+   "size": [
+    28,
+    84
+   ],
+   "category": "Environment"
+  },
+  {
+   "path": "Environment/Goals/Goal_Right.png",
+   "size": [
+    28,
+    84
+   ],
+   "category": "Environment"
+  },
+  {
+   "path": "Environment/Goals/Goal_Net.png",
+   "size": [
+    22,
+    72
+   ],
+   "category": "Environment"
+  },
+  {
+   "path": "Environment/Goals/Goal_Collision.json",
+   "size": null,
+   "category": "Data"
+  },
+  {
+   "path": "Environment/Decorations/Spectators_2f.png",
+   "size": [
+    80,
+    26
+   ],
+   "category": "Environment"
+  },
+  {
+   "path": "Environment/Decorations/Scoreboard.png",
+   "size": [
+    96,
+    30
+   ],
+   "category": "Environment"
+  },
+  {
+   "path": "Environment/Decorations/Stadium_Light.png",
+   "size": [
+    24,
+    44
+   ],
+   "category": "Environment"
+  },
+  {
+   "path": "Environment/Decorations/Stadium_Entrance.png",
+   "size": [
+    56,
+    34
+   ],
+   "category": "Environment"
+  },
+  {
+   "path": "Environment/Decorations/Stadium_Fence.png",
+   "size": [
+    16,
+    10
+   ],
+   "category": "Environment"
+  },
+  {
+   "path": "Environment/Decorations/Bush.png",
+   "size": [
+    18,
+    14
+   ],
+   "category": "Environment"
+  },
+  {
+   "path": "Environment/Decorations/Bunting.png",
+   "size": [
+    160,
+    12
+   ],
+   "category": "Environment"
+  },
+  {
+   "path": "Environment/Decorations/Audience_Stands.png",
+   "size": [
+    64,
+    48
+   ],
+   "category": "Environment"
+  },
+  {
+   "path": "Environment/Decorations/Ad_Board_COZY.png",
+   "size": [
+    48,
+    10
+   ],
+   "category": "Environment"
+  },
+  {
+   "path": "Environment/Decorations/Ad_Board_KOPI.png",
+   "size": [
+    48,
+    10
+   ],
+   "category": "Environment"
+  },
+  {
+   "path": "Environment/Decorations/Ad_Board_SOTO.png",
+   "size": [
+    48,
+    10
+   ],
+   "category": "Environment"
+  },
+  {
+   "path": "Environment/Decorations/Ad_Board_PIXEL.png",
+   "size": [
+    48,
+    10
+   ],
+   "category": "Environment"
+  },
+  {
+   "path": "Environment/Decorations/Ad_Board_GOAL.png",
+   "size": [
+    48,
+    10
+   ],
+   "category": "Environment"
+  },
+  {
+   "path": "Environment/Decorations/Ad_Board_BAKSO.png",
+   "size": [
+    48,
+    10
+   ],
+   "category": "Environment"
+  },
+  {
+   "path": "Environment/Decorations/Ad_Board_TEH.png",
+   "size": [
+    48,
+    10
+   ],
+   "category": "Environment"
+  },
+  {
+   "path": "Environment/Decorations/Ad_Board_FC.png",
+   "size": [
+    48,
+    10
+   ],
+   "category": "Environment"
+  },
+  {
+   "path": "Environment/Decorations/Stadium_Shadow.png",
+   "size": [
+    8,
+    8
+   ],
+   "category": "Environment"
+  },
+  {
+   "path": "Objects/Football/Football_8x8_Spin_4f.png",
+   "size": [
+    40,
+    10
+   ],
+   "category": "Objects"
+  },
+  {
+   "path": "Objects/Football/Football_16x16_Spin_4f.png",
+   "size": [
+    72,
+    18
+   ],
+   "category": "Objects"
+  },
+  {
+   "path": "Objects/Football/Football_8x8.png",
+   "size": [
+    8,
+    8
+   ],
+   "category": "Objects"
+  },
+  {
+   "path": "Objects/Football/Football_16x16.png",
+   "size": [
+    16,
+    16
+   ],
+   "category": "Objects"
+  },
+  {
+   "path": "Objects/Football/Football_Shadow.png",
+   "size": [
+    10,
+    5
+   ],
+   "category": "Objects"
+  },
+  {
+   "path": "Objects/Football/Ball_Trail.png",
+   "size": [
+    32,
+    8
+   ],
+   "category": "Objects"
+  },
+  {
+   "path": "Objects/Training_Equipment/Training_Cone.png",
+   "size": [
+    12,
+    14
+   ],
+   "category": "Objects"
+  },
+  {
+   "path": "Objects/Training_Equipment/Training_Goal.png",
+   "size": [
+    28,
+    44
+   ],
+   "category": "Objects"
+  },
+  {
+   "path": "Objects/Training_Equipment/Training_Marker.png",
+   "size": [
+    10,
+    10
+   ],
+   "category": "Objects"
+  },
+  {
+   "path": "Objects/Training_Equipment/Training_Pole.png",
+   "size": [
+    4,
+    26
+   ],
+   "category": "Objects"
+  },
+  {
+   "path": "Objects/Training_Equipment/Shooting_Target.png",
+   "size": [
+    32,
+    32
+   ],
+   "category": "Objects"
+  },
+  {
+   "path": "Objects/Training_Equipment/Passing_Target.png",
+   "size": [
+    24,
+    24
+   ],
+   "category": "Objects"
+  },
+  {
+   "path": "Objects/Training_Equipment/Dribbling_Cones.png",
+   "size": [
+    112,
+    18
+   ],
+   "category": "Objects"
+  },
+  {
+   "path": "Objects/Training_Equipment/Free_Kick_Wall.png",
+   "size": [
+    54,
+    28
+   ],
+   "category": "Objects"
+  },
+  {
+   "path": "Objects/Training_Equipment/GK_Training_Goal.png",
+   "size": [
+    36,
+    56
+   ],
+   "category": "Objects"
+  },
+  {
+   "path": "Objects/Training_Equipment/Whistle.png",
+   "size": [
+    10,
+    8
+   ],
+   "category": "Objects"
+  },
+  {
+   "path": "Objects/Training_Equipment/Water_Bottle.png",
+   "size": [
+    6,
+    12
+   ],
+   "category": "Objects"
+  },
+  {
+   "path": "Objects/Training_Equipment/Football_Bag.png",
+   "size": [
+    18,
+    14
+   ],
+   "category": "Objects"
+  },
+  {
+   "path": "Objects/Training_Equipment/Substitution_Board.png",
+   "size": [
+    26,
+    18
+   ],
+   "category": "Objects"
+  },
+  {
+   "path": "Objects/Training_Equipment/Corner_Flag.png",
+   "size": [
+    10,
+    22
+   ],
+   "category": "Objects"
+  },
+  {
+   "path": "Objects/Training_Equipment/Referee_Flag.png",
+   "size": [
+    14,
+    22
+   ],
+   "category": "Objects"
+  },
+  {
+   "path": "Objects/Referee/Referee_4f.png",
+   "size": [
+    128,
+    32
+   ],
+   "category": "Objects"
+  },
+  {
+   "path": "Objects/Referee/Referee.json",
+   "size": null,
+   "category": "Data"
+  },
+  {
+   "path": "Objects/Football/Player_Shadow.png",
+   "size": [
+    18,
+    8
+   ],
+   "category": "Objects"
+  },
+  {
+   "path": "UI/Common/panel_cream_9slice.png",
+   "size": [
+    48,
+    48
+   ],
+   "category": "UI"
+  },
+  {
+   "path": "UI/Common/panel_wood_9slice.png",
+   "size": [
+    48,
+    48
+   ],
+   "category": "UI"
+  },
+  {
+   "path": "UI/Common/panel_dark_9slice.png",
+   "size": [
+    48,
+    48
+   ],
+   "category": "UI"
+  },
+  {
+   "path": "UI/Common/panel_sage_9slice.png",
+   "size": [
+    48,
+    48
+   ],
+   "category": "UI"
+  },
+  {
+   "path": "UI/Common/window_9slice.png",
+   "size": [
+    64,
+    56
+   ],
+   "category": "UI"
+  },
+  {
+   "path": "UI/Common/popup_9slice.png",
+   "size": [
+    80,
+    56
+   ],
+   "category": "UI"
+  },
+  {
+   "path": "UI/Common/button_normal_9slice.png",
+   "size": [
+    40,
+    20
+   ],
+   "category": "UI"
+  },
+  {
+   "path": "UI/Common/button_pressed_9slice.png",
+   "size": [
+    40,
+    20
+   ],
+   "category": "UI"
+  },
+  {
+   "path": "UI/Common/button_disabled_9slice.png",
+   "size": [
+    40,
+    20
+   ],
+   "category": "UI"
+  },
+  {
+   "path": "UI/Common/button_green_normal_9slice.png",
+   "size": [
+    40,
+    20
+   ],
+   "category": "UI"
+  },
+  {
+   "path": "UI/Common/button_green_pressed_9slice.png",
+   "size": [
+    40,
+    20
+   ],
+   "category": "UI"
+  },
+  {
+   "path": "UI/Common/button_green_disabled_9slice.png",
+   "size": [
+    40,
+    20
+   ],
+   "category": "UI"
+  },
+  {
+   "path": "UI/Common/checkbox_off.png",
+   "size": [
+    14,
+    14
+   ],
+   "category": "UI"
+  },
+  {
+   "path": "UI/Common/checkbox_on.png",
+   "size": [
+    14,
+    14
+   ],
+   "category": "UI"
+  },
+  {
+   "path": "UI/Common/toggle_off.png",
+   "size": [
+    30,
+    16
+   ],
+   "category": "UI"
+  },
+  {
+   "path": "UI/Common/toggle_on.png",
+   "size": [
+    30,
+    16
+   ],
+   "category": "UI"
+  },
+  {
+   "path": "UI/Common/progress_bg_9slice.png",
+   "size": [
+    64,
+    10
+   ],
+   "category": "UI"
+  },
+  {
+   "path": "UI/Common/progress_fill_green.png",
+   "size": [
+    64,
+    10
+   ],
+   "category": "UI"
+  },
+  {
+   "path": "UI/Common/progress_fill_rust.png",
+   "size": [
+    64,
+    10
+   ],
+   "category": "UI"
+  },
+  {
+   "path": "UI/Common/progress_fill_gold.png",
+   "size": [
+    64,
+    10
+   ],
+   "category": "UI"
+  },
+  {
+   "path": "UI/Common/scroll_track.png",
+   "size": [
+    8,
+    40
+   ],
+   "category": "UI"
+  },
+  {
+   "path": "UI/Common/scroll_thumb.png",
+   "size": [
+    8,
+    16
+   ],
+   "category": "UI"
+  },
+  {
+   "path": "UI/Common/tooltip_9slice.png",
+   "size": [
+    40,
+    24
+   ],
+   "category": "UI"
+  },
+  {
+   "path": "UI/Common/btn_close.png",
+   "size": [
+    24,
+    24
+   ],
+   "category": "UI"
+  },
+  {
+   "path": "UI/Common/btn_back.png",
+   "size": [
+    24,
+    24
+   ],
+   "category": "UI"
+  },
+  {
+   "path": "UI/Common/confirmation_dialog.png",
+   "size": [
+    120,
+    64
+   ],
+   "category": "UI"
+  },
+  {
+   "path": "UI/Common/loading_0.png",
+   "size": [
+    16,
+    16
+   ],
+   "category": "UI"
+  },
+  {
+   "path": "UI/Common/loading_1.png",
+   "size": [
+    16,
+    16
+   ],
+   "category": "UI"
+  },
+  {
+   "path": "UI/Common/loading_2.png",
+   "size": [
+    16,
+    16
+   ],
+   "category": "UI"
+  },
+  {
+   "path": "UI/Common/loading_3.png",
+   "size": [
+    16,
+    16
+   ],
+   "category": "UI"
+  },
+  {
+   "path": "UI/Common/loading_4.png",
+   "size": [
+    16,
+    16
+   ],
+   "category": "UI"
+  },
+  {
+   "path": "UI/Common/loading_5.png",
+   "size": [
+    16,
+    16
+   ],
+   "category": "UI"
+  },
+  {
+   "path": "UI/Common/loading_6.png",
+   "size": [
+    16,
+    16
+   ],
+   "category": "UI"
+  },
+  {
+   "path": "UI/Common/loading_7.png",
+   "size": [
+    16,
+    16
+   ],
+   "category": "UI"
+  },
+  {
+   "path": "UI/Gameplay_HUD/btn_pass.png",
+   "size": [
+    32,
+    32
+   ],
+   "category": "UI"
+  },
+  {
+   "path": "UI/Gameplay_HUD/btn_pass_pressed.png",
+   "size": [
+    32,
+    32
+   ],
+   "category": "UI"
+  },
+  {
+   "path": "UI/Gameplay_HUD/btn_shoot.png",
+   "size": [
+    32,
+    32
+   ],
+   "category": "UI"
+  },
+  {
+   "path": "UI/Gameplay_HUD/btn_shoot_pressed.png",
+   "size": [
+    32,
+    32
+   ],
+   "category": "UI"
+  },
+  {
+   "path": "UI/Gameplay_HUD/btn_sprint.png",
+   "size": [
+    32,
+    32
+   ],
+   "category": "UI"
+  },
+  {
+   "path": "UI/Gameplay_HUD/btn_sprint_pressed.png",
+   "size": [
+    32,
+    32
+   ],
+   "category": "UI"
+  },
+  {
+   "path": "UI/Gameplay_HUD/btn_tackle.png",
+   "size": [
+    32,
+    32
+   ],
+   "category": "UI"
+  },
+  {
+   "path": "UI/Gameplay_HUD/btn_tackle_pressed.png",
+   "size": [
+    32,
+    32
+   ],
+   "category": "UI"
+  },
+  {
+   "path": "UI/Gameplay_HUD/btn_switch.png",
+   "size": [
+    32,
+    32
+   ],
+   "category": "UI"
+  },
+  {
+   "path": "UI/Gameplay_HUD/btn_switch_pressed.png",
+   "size": [
+    32,
+    32
+   ],
+   "category": "UI"
+  },
+  {
+   "path": "UI/Gameplay_HUD/btn_through.png",
+   "size": [
+    32,
+    32
+   ],
+   "category": "UI"
+  },
+  {
+   "path": "UI/Gameplay_HUD/btn_through_pressed.png",
+   "size": [
+    32,
+    32
+   ],
+   "category": "UI"
+  },
+  {
+   "path": "UI/Gameplay_HUD/joystick_base.png",
+   "size": [
+    64,
+    64
+   ],
+   "category": "UI"
+  },
+  {
+   "path": "UI/Gameplay_HUD/joystick_knob.png",
+   "size": [
+    28,
+    28
+   ],
+   "category": "UI"
+  },
+  {
+   "path": "UI/Gameplay_HUD/btn_pause.png",
+   "size": [
+    24,
+    24
+   ],
+   "category": "UI"
+  },
+  {
+   "path": "UI/Gameplay_HUD/scoreboard.png",
+   "size": [
+    112,
+    26
+   ],
+   "category": "UI"
+  },
+  {
+   "path": "UI/Gameplay_HUD/match_timer.png",
+   "size": [
+    48,
+    16
+   ],
+   "category": "UI"
+  },
+  {
+   "path": "UI/Gameplay_HUD/team_indicator_home.png",
+   "size": [
+    16,
+    8
+   ],
+   "category": "UI"
+  },
+  {
+   "path": "UI/Gameplay_HUD/team_indicator_away.png",
+   "size": [
+    16,
+    8
+   ],
+   "category": "UI"
+  },
+  {
+   "path": "UI/Gameplay_HUD/active_player_indicator.png",
+   "size": [
+    12,
+    8
+   ],
+   "category": "UI"
+  },
+  {
+   "path": "UI/Gameplay_HUD/stamina_bar_bg.png",
+   "size": [
+    32,
+    8
+   ],
+   "category": "UI"
+  },
+  {
+   "path": "UI/Gameplay_HUD/stamina_bar_fill.png",
+   "size": [
+    32,
+    8
+   ],
+   "category": "UI"
+  },
+  {
+   "path": "UI/Gameplay_HUD/match_event_notification.png",
+   "size": [
+    96,
+    18
+   ],
+   "category": "UI"
+  },
+  {
+   "path": "UI/Main_Menu/menu_panel_9slice.png",
+   "size": [
+    64,
+    64
+   ],
+   "category": "UI"
+  },
+  {
+   "path": "UI/Main_Menu/navigation_bar.png",
+   "size": [
+    256,
+    28
+   ],
+   "category": "UI"
+  },
+  {
+   "path": "UI/Main_Menu/btn_play.png",
+   "size": [
+    104,
+    22
+   ],
+   "category": "UI"
+  },
+  {
+   "path": "UI/Main_Menu/btn_training.png",
+   "size": [
+    104,
+    22
+   ],
+   "category": "UI"
+  },
+  {
+   "path": "UI/Main_Menu/btn_tournament.png",
+   "size": [
+    104,
+    22
+   ],
+   "category": "UI"
+  },
+  {
+   "path": "UI/Main_Menu/btn_team.png",
+   "size": [
+    104,
+    22
+   ],
+   "category": "UI"
+  },
+  {
+   "path": "UI/Main_Menu/btn_players.png",
+   "size": [
+    104,
+    22
+   ],
+   "category": "UI"
+  },
+  {
+   "path": "UI/Main_Menu/btn_shop.png",
+   "size": [
+    104,
+    22
+   ],
+   "category": "UI"
+  },
+  {
+   "path": "UI/Main_Menu/btn_settings.png",
+   "size": [
+    104,
+    22
+   ],
+   "category": "UI"
+  },
+  {
+   "path": "UI/Main_Menu/btn_exit.png",
+   "size": [
+    104,
+    22
+   ],
+   "category": "UI"
+  },
+  {
+   "path": "UI/Team_Management/pitch_diagram.png",
+   "size": [
+    96,
+    128
+   ],
+   "category": "UI"
+  },
+  {
+   "path": "UI/Team_Management/slot_player.png",
+   "size": [
+    32,
+    32
+   ],
+   "category": "UI"
+  },
+  {
+   "path": "UI/Team_Management/slot_starting_xi.png",
+   "size": [
+    32,
+    32
+   ],
+   "category": "UI"
+  },
+  {
+   "path": "UI/Team_Management/slot_bench.png",
+   "size": [
+    32,
+    32
+   ],
+   "category": "UI"
+  },
+  {
+   "path": "UI/Team_Management/selector_frame.png",
+   "size": [
+    34,
+    34
+   ],
+   "category": "UI"
+  },
+  {
+   "path": "UI/Team_Management/player_stats_panel_9slice.png",
+   "size": [
+    96,
+    72
+   ],
+   "category": "UI"
+  },
+  {
+   "path": "UI/Team_Management/player_selection_panel_9slice.png",
+   "size": [
+    96,
+    72
+   ],
+   "category": "UI"
+  },
+  {
+   "path": "UI/Team_Management/formation_selector.png",
+   "size": [
+    96,
+    22
+   ],
+   "category": "UI"
+  },
+  {
+   "path": "UI/Team_Management/captain_badge.png",
+   "size": [
+    16,
+    16
+   ],
+   "category": "UI"
+  },
+  {
+   "path": "UI/Team_Management/position_indicator.png",
+   "size": [
+    16,
+    16
+   ],
+   "category": "UI"
+  },
+  {
+   "path": "UI/Team_Management/player_comparison_panel.png",
+   "size": [
+    120,
+    72
+   ],
+   "category": "UI"
+  },
+  {
+   "path": "UI/Team_Management/formation_background.png",
+   "size": [
+    96,
+    128
+   ],
+   "category": "UI"
+  },
+  {
+   "path": "UI/Player_Upgrade/stat_bar_green.png",
+   "size": [
+    64,
+    8
+   ],
+   "category": "UI"
+  },
+  {
+   "path": "UI/Player_Upgrade/stat_bar_rust.png",
+   "size": [
+    64,
+    8
+   ],
+   "category": "UI"
+  },
+  {
+   "path": "UI/Player_Upgrade/stat_upgrade_button.png",
+   "size": [
+    40,
+    16
+   ],
+   "category": "UI"
+  },
+  {
+   "path": "UI/Player_Upgrade/upgrade_confirmation_panel.png",
+   "size": [
+    120,
+    64
+   ],
+   "category": "UI"
+  },
+  {
+   "path": "UI/Player_Upgrade/max_level_indicator.png",
+   "size": [
+    30,
+    12
+   ],
+   "category": "UI"
+  },
+  {
+   "path": "UI/Player_Upgrade/level_badge_example.png",
+   "size": [
+    30,
+    12
+   ],
+   "category": "UI"
+  },
+  {
+   "path": "UI/Player_Upgrade/coin_counter.png",
+   "size": [
+    56,
+    16
+   ],
+   "category": "UI"
+  },
+  {
+   "path": "UI/Player_Upgrade/xp_progress_bar.png",
+   "size": [
+    64,
+    10
+   ],
+   "category": "UI"
+  },
+  {
+   "path": "UI/Recruitment/price_tag.png",
+   "size": [
+    52,
+    14
+   ],
+   "category": "UI"
+  },
+  {
+   "path": "UI/Recruitment/btn_recruit.png",
+   "size": [
+    72,
+    20
+   ],
+   "category": "UI"
+  },
+  {
+   "path": "UI/Recruitment/sold_out_indicator.png",
+   "size": [
+    64,
+    16
+   ],
+   "category": "UI"
+  },
+  {
+   "path": "UI/Recruitment/recruitment_banner.png",
+   "size": [
+    160,
+    28
+   ],
+   "category": "UI"
+  },
+  {
+   "path": "UI/Recruitment/shop_refresh_icon.png",
+   "size": [
+    16,
+    16
+   ],
+   "category": "UI"
+  },
+  {
+   "path": "UI/Recruitment/recruitment_success_popup.png",
+   "size": [
+    120,
+    56
+   ],
+   "category": "UI"
+  },
+  {
+   "path": "UI/Recruitment/player_detail_panel_9slice.png",
+   "size": [
+    120,
+    96
+   ],
+   "category": "UI"
+  },
+  {
+   "path": "UI/Tournament/tournament_selection_panel_9slice.png",
+   "size": [
+    128,
+    96
+   ],
+   "category": "UI"
+  },
+  {
+   "path": "UI/Tournament/tournament_info_card_9slice.png",
+   "size": [
+    96,
+    64
+   ],
+   "category": "UI"
+  },
+  {
+   "path": "UI/Tournament/opponent_card_9slice.png",
+   "size": [
+    64,
+    72
+   ],
+   "category": "UI"
+  },
+  {
+   "path": "UI/Tournament/match_preview_panel_9slice.png",
+   "size": [
+    128,
+    72
+   ],
+   "category": "UI"
+  },
+  {
+   "path": "UI/Training/Training_Scoreboard.png",
+   "size": [
+    112,
+    26
+   ],
+   "category": "UI"
+  },
+  {
+   "path": "UI/Training/Training_Timer.png",
+   "size": [
+    48,
+    16
+   ],
+   "category": "UI"
+  },
+  {
+   "path": "UI/Training/Rank_S_A_B_C.png",
+   "size": [
+    200,
+    40
+   ],
+   "category": "UI"
+  },
+  {
+   "path": "UI/Training/Training_Rank_Panel.png",
+   "size": [
+    128,
+    88
+   ],
+   "category": "UI"
+  },
+  {
+   "path": "UI/Tournament/Beginner_Cup_Logo.png",
+   "size": [
+    48,
+    52
+   ],
+   "category": "UI"
+  },
+  {
+   "path": "UI/Tournament/Cozy_League_Logo.png",
+   "size": [
+    48,
+    52
+   ],
+   "category": "UI"
+  },
+  {
+   "path": "UI/Tournament/Grand_Pixel_Cup_Logo.png",
+   "size": [
+    48,
+    52
+   ],
+   "category": "UI"
+  },
+  {
+   "path": "UI/Tournament/Tournament_Banner_Beginner_Cup.png",
+   "size": [
+    192,
+    48
+   ],
+   "category": "UI"
+  },
+  {
+   "path": "UI/Tournament/Tournament_Banner_Cozy_League_Cup.png",
+   "size": [
+    192,
+    48
+   ],
+   "category": "UI"
+  },
+  {
+   "path": "UI/Tournament/Tournament_Banner_Grand_Pixel_Cup.png",
+   "size": [
+    192,
+    48
+   ],
+   "category": "UI"
+  },
+  {
+   "path": "UI/Tournament/Tournament_Trophy.png",
+   "size": [
+    30,
+    38
+   ],
+   "category": "UI"
+  },
+  {
+   "path": "UI/Tournament/Trophy_Silver.png",
+   "size": [
+    30,
+    38
+   ],
+   "category": "UI"
+  },
+  {
+   "path": "UI/Tournament/Trophy_Bronze.png",
+   "size": [
+    30,
+    38
+   ],
+   "category": "UI"
+  },
+  {
+   "path": "UI/Tournament/Gold_Medal.png",
+   "size": [
+    16,
+    22
+   ],
+   "category": "UI"
+  },
+  {
+   "path": "UI/Tournament/Silver_Medal.png",
+   "size": [
+    16,
+    22
+   ],
+   "category": "UI"
+  },
+  {
+   "path": "UI/Tournament/Bronze_Medal.png",
+   "size": [
+    16,
+    22
+   ],
+   "category": "UI"
+  },
+  {
+   "path": "UI/Tournament/Tournament_Bracket_4.png",
+   "size": [
+    192,
+    112
+   ],
+   "category": "UI"
+  },
+  {
+   "path": "UI/Tournament/Tournament_Bracket_8.png",
+   "size": [
+    192,
+    112
+   ],
+   "category": "UI"
+  },
+  {
+   "path": "UI/Tournament/Match_Result_Panel.png",
+   "size": [
+    160,
+    80
+   ],
+   "category": "UI"
+  },
+  {
+   "path": "UI/Tournament/Reward_Popup.png",
+   "size": [
+    128,
+    72
+   ],
+   "category": "UI"
+  },
+  {
+   "path": "UI/Tournament/Winner_Banner.png",
+   "size": [
+    160,
+    36
+   ],
+   "category": "UI"
+  },
+  {
+   "path": "UI/Tournament/Runner_up_Banner.png",
+   "size": [
+    160,
+    36
+   ],
+   "category": "UI"
+  },
+  {
+   "path": "UI/Tournament/Trophy_Display.png",
+   "size": [
+    64,
+    64
+   ],
+   "category": "UI"
+  },
+  {
+   "path": "UI/Tournament/Victory_Screen.png",
+   "size": [
+    192,
+    108
+   ],
+   "category": "UI"
+  },
+  {
+   "path": "UI/Tournament/Defeat_Screen.png",
+   "size": [
+    192,
+    108
+   ],
+   "category": "UI"
+  },
+  {
+   "path": "UI/Tournament/Team_Logo_Default.png",
+   "size": [
+    32,
+    32
+   ],
+   "category": "UI"
+  },
+  {
+   "path": "Icons/Currency/Coin.png",
+   "size": [
+    16,
+    16
+   ],
+   "category": "Icons"
+  },
+  {
+   "path": "Icons/Currency/Wallet.png",
+   "size": [
+    16,
+    16
+   ],
+   "category": "Icons"
+  },
+  {
+   "path": "Icons/Football/Ball.png",
+   "size": [
+    16,
+    16
+   ],
+   "category": "Icons"
+  },
+  {
+   "path": "Icons/Football/Goal.png",
+   "size": [
+    16,
+    16
+   ],
+   "category": "Icons"
+  },
+  {
+   "path": "Icons/Football/Whistle.png",
+   "size": [
+    16,
+    16
+   ],
+   "category": "Icons"
+  },
+  {
+   "path": "Icons/Player/Player.png",
+   "size": [
+    16,
+    16
+   ],
+   "category": "Icons"
+  },
+  {
+   "path": "Icons/Player/Captain.png",
+   "size": [
+    16,
+    16
+   ],
+   "category": "Icons"
+  },
+  {
+   "path": "Icons/Player/Team.png",
+   "size": [
+    16,
+    16
+   ],
+   "category": "Icons"
+  },
+  {
+   "path": "Icons/Position/GK.png",
+   "size": [
+    16,
+    16
+   ],
+   "category": "Icons"
+  },
+  {
+   "path": "Icons/Position/DEF.png",
+   "size": [
+    16,
+    16
+   ],
+   "category": "Icons"
+  },
+  {
+   "path": "Icons/Position/MID.png",
+   "size": [
+    16,
+    16
+   ],
+   "category": "Icons"
+  },
+  {
+   "path": "Icons/Position/ATT.png",
+   "size": [
+    16,
+    16
+   ],
+   "category": "Icons"
+  },
+  {
+   "path": "Icons/Stat/Pace.png",
+   "size": [
+    16,
+    16
+   ],
+   "category": "Icons"
+  },
+  {
+   "path": "Icons/Stat/Shooting.png",
+   "size": [
+    16,
+    16
+   ],
+   "category": "Icons"
+  },
+  {
+   "path": "Icons/Stat/Passing.png",
+   "size": [
+    16,
+    16
+   ],
+   "category": "Icons"
+  },
+  {
+   "path": "Icons/Stat/Dribbling.png",
+   "size": [
+    16,
+    16
+   ],
+   "category": "Icons"
+  },
+  {
+   "path": "Icons/Stat/Defense.png",
+   "size": [
+    16,
+    16
+   ],
+   "category": "Icons"
+  },
+  {
+   "path": "Icons/Stat/Physical.png",
+   "size": [
+    16,
+    16
+   ],
+   "category": "Icons"
+  },
+  {
+   "path": "Icons/Goalkeeper/Reflex.png",
+   "size": [
+    16,
+    16
+   ],
+   "category": "Icons"
+  },
+  {
+   "path": "Icons/Goalkeeper/Handling.png",
+   "size": [
+    16,
+    16
+   ],
+   "category": "Icons"
+  },
+  {
+   "path": "Icons/Goalkeeper/Diving.png",
+   "size": [
+    16,
+    16
+   ],
+   "category": "Icons"
+  },
+  {
+   "path": "Icons/Skill/Passive.png",
+   "size": [
+    16,
+    16
+   ],
+   "category": "Icons"
+  },
+  {
+   "path": "Icons/Skill/Skill.png",
+   "size": [
+    16,
+    16
+   ],
+   "category": "Icons"
+  },
+  {
+   "path": "Icons/Skill/Special.png",
+   "size": [
+    16,
+    16
+   ],
+   "category": "Icons"
+  },
+  {
+   "path": "Icons/Progress/XP.png",
+   "size": [
+    16,
+    16
+   ],
+   "category": "Icons"
+  },
+  {
+   "path": "Icons/Progress/LevelUp.png",
+   "size": [
+    16,
+    16
+   ],
+   "category": "Icons"
+  },
+  {
+   "path": "Icons/Progress/Upgrade.png",
+   "size": [
+    16,
+    16
+   ],
+   "category": "Icons"
+  },
+  {
+   "path": "Icons/Rarity/Common.png",
+   "size": [
+    16,
+    16
+   ],
+   "category": "Icons"
+  },
+  {
+   "path": "Icons/Rarity/Rare.png",
+   "size": [
+    16,
+    16
+   ],
+   "category": "Icons"
+  },
+  {
+   "path": "Icons/Rarity/Epic.png",
+   "size": [
+    16,
+    16
+   ],
+   "category": "Icons"
+  },
+  {
+   "path": "Icons/Rarity/Legendary.png",
+   "size": [
+    16,
+    16
+   ],
+   "category": "Icons"
+  },
+  {
+   "path": "Icons/Tournament/Cup.png",
+   "size": [
+    16,
+    16
+   ],
+   "category": "Icons"
+  },
+  {
+   "path": "Icons/Tournament/Trophy.png",
+   "size": [
+    16,
+    16
+   ],
+   "category": "Icons"
+  },
+  {
+   "path": "Icons/Tournament/Medal.png",
+   "size": [
+    16,
+    16
+   ],
+   "category": "Icons"
+  },
+  {
+   "path": "Icons/Nav/Home.png",
+   "size": [
+    16,
+    16
+   ],
+   "category": "Icons"
+  },
+  {
+   "path": "Icons/Nav/Back.png",
+   "size": [
+    16,
+    16
+   ],
+   "category": "Icons"
+  },
+  {
+   "path": "Icons/Nav/Next.png",
+   "size": [
+    16,
+    16
+   ],
+   "category": "Icons"
+  },
+  {
+   "path": "Icons/Nav/Settings.png",
+   "size": [
+    16,
+    16
+   ],
+   "category": "Icons"
+  },
+  {
+   "path": "Icons/Match/Clock.png",
+   "size": [
+    16,
+    16
+   ],
+   "category": "Icons"
+  },
+  {
+   "path": "Icons/Match/Score.png",
+   "size": [
+    16,
+    16
+   ],
+   "category": "Icons"
+  },
+  {
+   "path": "Icons/Match/Pause.png",
+   "size": [
+    16,
+    16
+   ],
+   "category": "Icons"
+  },
+  {
+   "path": "Icons/Match/Resume.png",
+   "size": [
+    16,
+    16
+   ],
+   "category": "Icons"
+  },
+  {
+   "path": "Icons/Status/Locked.png",
+   "size": [
+    16,
+    16
+   ],
+   "category": "Icons"
+  },
+  {
+   "path": "Icons/Status/Unlocked.png",
+   "size": [
+    16,
+    16
+   ],
+   "category": "Icons"
+  },
+  {
+   "path": "Icons/Status/Selected.png",
+   "size": [
+    16,
+    16
+   ],
+   "category": "Icons"
+  },
+  {
+   "path": "Icons/Status/Completed.png",
+   "size": [
+    16,
+    16
+   ],
+   "category": "Icons"
+  },
+  {
+   "path": "Icons/Common/Close.png",
+   "size": [
+    16,
+    16
+   ],
+   "category": "Icons"
+  },
+  {
+   "path": "Icons/Common/Plus.png",
+   "size": [
+    16,
+    16
+   ],
+   "category": "Icons"
+  },
+  {
+   "path": "Icons/Common/Minus.png",
+   "size": [
+    16,
+    16
+   ],
+   "category": "Icons"
+  },
+  {
+   "path": "Icons/Common/Refresh.png",
+   "size": [
+    16,
+    16
+   ],
+   "category": "Icons"
+  },
+  {
+   "path": "Icons/Settings/Sound.png",
+   "size": [
+    16,
+    16
+   ],
+   "category": "Icons"
+  },
+  {
+   "path": "Icons/Settings/Music.png",
+   "size": [
+    16,
+    16
+   ],
+   "category": "Icons"
+  },
+  {
+   "path": "Icons/Settings/Vibration.png",
+   "size": [
+    16,
+    16
+   ],
+   "category": "Icons"
+  },
+  {
+   "path": "Icons/Settings/Language.png",
+   "size": [
+    16,
+    16
+   ],
+   "category": "Icons"
+  },
+  {
+   "path": "Icons/Settings/Info.png",
+   "size": [
+    16,
+    16
+   ],
+   "category": "Icons"
+  },
+  {
+   "path": "Icons/Settings/Privacy.png",
+   "size": [
+    16,
+    16
+   ],
+   "category": "Icons"
+  },
+  {
+   "path": "Icons/Icons_Atlas_16x16.png",
+   "size": [
+    128,
+    112
+   ],
+   "category": "Icons"
+  },
+  {
+   "path": "Icons/Icons_Atlas.json",
+   "size": null,
+   "category": "Data"
+  },
+  {
+   "path": "VFX/Ball_Kick_Dust_6f_16x16.png",
+   "size": [
+    96,
+    16
+   ],
+   "category": "VFX"
+  },
+  {
+   "path": "VFX/Ball_Kick_Dust.json",
+   "size": null,
+   "category": "Data"
+  },
+  {
+   "path": "VFX/Ball_Impact_4f_16x16.png",
+   "size": [
+    64,
+    16
+   ],
+   "category": "VFX"
+  },
+  {
+   "path": "VFX/Ball_Impact.json",
+   "size": null,
+   "category": "Data"
+  },
+  {
+   "path": "VFX/Goal_Explosion_8f_64x64.png",
+   "size": [
+    512,
+    64
+   ],
+   "category": "VFX"
+  },
+  {
+   "path": "VFX/Goal_Explosion.json",
+   "size": null,
+   "category": "Data"
+  },
+  {
+   "path": "VFX/Goal_Celebration_Particles_8f_64x64.png",
+   "size": [
+    512,
+    64
+   ],
+   "category": "VFX"
+  },
+  {
+   "path": "VFX/Goal_Celebration_Particles.json",
+   "size": null,
+   "category": "Data"
+  },
+  {
+   "path": "VFX/Sprint_Dust_4f_16x16.png",
+   "size": [
+    64,
+    16
+   ],
+   "category": "VFX"
+  },
+  {
+   "path": "VFX/Sprint_Dust.json",
+   "size": null,
+   "category": "Data"
+  },
+  {
+   "path": "VFX/Tackle_Dust_5f_24x24.png",
+   "size": [
+    120,
+    24
+   ],
+   "category": "VFX"
+  },
+  {
+   "path": "VFX/Tackle_Dust.json",
+   "size": null,
+   "category": "Data"
+  },
+  {
+   "path": "VFX/Player_Selection_Glow_4f_36x18.png",
+   "size": [
+    144,
+    18
+   ],
+   "category": "VFX"
+  },
+  {
+   "path": "VFX/Player_Selection_Glow.json",
+   "size": null,
+   "category": "Data"
+  },
+  {
+   "path": "VFX/Passing_Trail_4f_28x6.png",
+   "size": [
+    112,
+    6
+   ],
+   "category": "VFX"
+  },
+  {
+   "path": "VFX/Passing_Trail.json",
+   "size": null,
+   "category": "Data"
+  },
+  {
+   "path": "VFX/Shooting_Trail_4f_32x10.png",
+   "size": [
+    128,
+    10
+   ],
+   "category": "VFX"
+  },
+  {
+   "path": "VFX/Shooting_Trail.json",
+   "size": null,
+   "category": "Data"
+  },
+  {
+   "path": "VFX/Save_Impact_5f_32x32.png",
+   "size": [
+    160,
+    32
+   ],
+   "category": "VFX"
+  },
+  {
+   "path": "VFX/Save_Impact.json",
+   "size": null,
+   "category": "Data"
+  },
+  {
+   "path": "VFX/Level_Up_Sparkle_8f_32x32.png",
+   "size": [
+    256,
+    32
+   ],
+   "category": "VFX"
+  },
+  {
+   "path": "VFX/Level_Up_Sparkle.json",
+   "size": null,
+   "category": "Data"
+  },
+  {
+   "path": "VFX/Upgrade_Effect_8f_32x32.png",
+   "size": [
+    256,
+    32
+   ],
+   "category": "VFX"
+  },
+  {
+   "path": "VFX/Upgrade_Effect.json",
+   "size": null,
+   "category": "Data"
+  },
+  {
+   "path": "VFX/Recruitment_Effect_8f_48x48.png",
+   "size": [
+    384,
+    48
+   ],
+   "category": "VFX"
+  },
+  {
+   "path": "VFX/Recruitment_Effect.json",
+   "size": null,
+   "category": "Data"
+  },
+  {
+   "path": "VFX/Victory_Confetti_8f_96x64.png",
+   "size": [
+    768,
+    64
+   ],
+   "category": "VFX"
+  },
+  {
+   "path": "VFX/Victory_Confetti.json",
+   "size": null,
+   "category": "Data"
+  },
+  {
+   "path": "VFX/Preview_Goal_Explosion.gif",
+   "size": [
+    256,
+    256
+   ],
+   "category": "Animations"
+  },
+  {
+   "path": "VFX/Preview_Recruitment_Effect.gif",
+   "size": [
+    192,
+    192
+   ],
+   "category": "Animations"
+  },
+  {
+   "path": "Branding/Game_Logo.png",
+   "size": [
+    182,
+    68
+   ],
+   "category": "Branding"
+  },
+  {
+   "path": "Branding/Game_Logo_x3.png",
+   "size": [
+    546,
+    204
+   ],
+   "category": "Branding"
+  },
+  {
+   "path": "Branding/App_Icon_64.png",
+   "size": [
+    64,
+    64
+   ],
+   "category": "Branding"
+  },
+  {
+   "path": "Branding/Game_Icon_Android_192.png",
+   "size": [
+    192,
+    192
+   ],
+   "category": "Branding"
+  },
+  {
+   "path": "Branding/App_Icon_PlayStore_512.png",
+   "size": [
+    512,
+    512
+   ],
+   "category": "Branding"
+  },
+  {
+   "path": "Branding/Splash_Screen_320x180.png",
+   "size": [
+    320,
+    180
+   ],
+   "category": "Branding"
+  },
+  {
+   "path": "Branding/Splash_Screen_1920x1080.png",
+   "size": [
+    1920,
+    1080
+   ],
+   "category": "Branding"
+  },
+  {
+   "path": "Branding/Loading_Screen_320x180.png",
+   "size": [
+    320,
+    180
+   ],
+   "category": "Branding"
+  },
+  {
+   "path": "Branding/Studio_Logo_Placeholder.png",
+   "size": [
+    96,
+    32
+   ],
+   "category": "Branding"
+  },
+  {
+   "path": "Branding/Team_Emblem_01.png",
+   "size": [
+    32,
+    32
+   ],
+   "category": "Branding"
+  },
+  {
+   "path": "Branding/Team_Emblem_02.png",
+   "size": [
+    32,
+    32
+   ],
+   "category": "Branding"
+  },
+  {
+   "path": "Branding/Team_Emblem_03.png",
+   "size": [
+    32,
+    32
+   ],
+   "category": "Branding"
+  },
+  {
+   "path": "Branding/Team_Emblem_04.png",
+   "size": [
+    32,
+    32
+   ],
+   "category": "Branding"
+  },
+  {
+   "path": "Branding/Team_Emblem_05.png",
+   "size": [
+    32,
+    32
+   ],
+   "category": "Branding"
+  },
+  {
+   "path": "Branding/Team_Emblem_06.png",
+   "size": [
+    32,
+    32
+   ],
+   "category": "Branding"
+  },
+  {
+   "path": "Branding/Achievement_First_Tournament_Win.png",
+   "size": [
+    32,
+    32
+   ],
+   "category": "Branding"
+  },
+  {
+   "path": "Branding/Achievement_Clean_Sheet.png",
+   "size": [
+    32,
+    32
+   ],
+   "category": "Branding"
+  },
+  {
+   "path": "Branding/Achievement_Hat_trick.png",
+   "size": [
+    32,
+    32
+   ],
+   "category": "Branding"
+  },
+  {
+   "path": "Branding/Achievement_Comeback_Victory.png",
+   "size": [
+    32,
+    32
+   ],
+   "category": "Branding"
+  },
+  {
+   "path": "Branding/Achievement_Perfect_Tournament.png",
+   "size": [
+    32,
+    32
+   ],
+   "category": "Branding"
+  },
+  {
+   "path": "Branding/Background_Illustration_320x180.png",
+   "size": [
+    320,
+    180
+   ],
+   "category": "Branding"
+  },
+  {
+   "path": "Audio/SFX/SFX_Kick.wav",
+   "size": null,
+   "category": "Audio"
+  },
+  {
+   "path": "Audio/SFX/SFX_Kick.ogg",
+   "size": null,
+   "category": "Audio"
+  },
+  {
+   "path": "Audio/SFX/SFX_Pass.wav",
+   "size": null,
+   "category": "Audio"
+  },
+  {
+   "path": "Audio/SFX/SFX_Pass.ogg",
+   "size": null,
+   "category": "Audio"
+  },
+  {
+   "path": "Audio/SFX/SFX_Shoot.wav",
+   "size": null,
+   "category": "Audio"
+  },
+  {
+   "path": "Audio/SFX/SFX_Shoot.ogg",
+   "size": null,
+   "category": "Audio"
+  },
+  {
+   "path": "Audio/SFX/SFX_Tackle.wav",
+   "size": null,
+   "category": "Audio"
+  },
+  {
+   "path": "Audio/SFX/SFX_Tackle.ogg",
+   "size": null,
+   "category": "Audio"
+  },
+  {
+   "path": "Audio/SFX/SFX_Ball_Bounce.wav",
+   "size": null,
+   "category": "Audio"
+  },
+  {
+   "path": "Audio/SFX/SFX_Ball_Bounce.ogg",
+   "size": null,
+   "category": "Audio"
+  },
+  {
+   "path": "Audio/SFX/SFX_Goal.wav",
+   "size": null,
+   "category": "Audio"
+  },
+  {
+   "path": "Audio/SFX/SFX_Goal.ogg",
+   "size": null,
+   "category": "Audio"
+  },
+  {
+   "path": "Audio/SFX/SFX_Save.wav",
+   "size": null,
+   "category": "Audio"
+  },
+  {
+   "path": "Audio/SFX/SFX_Save.ogg",
+   "size": null,
+   "category": "Audio"
+  },
+  {
+   "path": "Audio/SFX/SFX_Whistle.wav",
+   "size": null,
+   "category": "Audio"
+  },
+  {
+   "path": "Audio/SFX/SFX_Whistle.ogg",
+   "size": null,
+   "category": "Audio"
+  },
+  {
+   "path": "Audio/SFX/SFX_Crowd_Cheer.wav",
+   "size": null,
+   "category": "Audio"
+  },
+  {
+   "path": "Audio/SFX/SFX_Crowd_Cheer.ogg",
+   "size": null,
+   "category": "Audio"
+  },
+  {
+   "path": "Audio/SFX/SFX_Crowd_Clap.wav",
+   "size": null,
+   "category": "Audio"
+  },
+  {
+   "path": "Audio/SFX/SFX_Crowd_Clap.ogg",
+   "size": null,
+   "category": "Audio"
+  },
+  {
+   "path": "Audio/SFX/SFX_Button_Click.wav",
+   "size": null,
+   "category": "Audio"
+  },
+  {
+   "path": "Audio/SFX/SFX_Button_Click.ogg",
+   "size": null,
+   "category": "Audio"
+  },
+  {
+   "path": "Audio/SFX/SFX_Coin.wav",
+   "size": null,
+   "category": "Audio"
+  },
+  {
+   "path": "Audio/SFX/SFX_Coin.ogg",
+   "size": null,
+   "category": "Audio"
+  },
+  {
+   "path": "Audio/SFX/SFX_Level_Up.wav",
+   "size": null,
+   "category": "Audio"
+  },
+  {
+   "path": "Audio/SFX/SFX_Level_Up.ogg",
+   "size": null,
+   "category": "Audio"
+  },
+  {
+   "path": "Audio/SFX/SFX_Upgrade.wav",
+   "size": null,
+   "category": "Audio"
+  },
+  {
+   "path": "Audio/SFX/SFX_Upgrade.ogg",
+   "size": null,
+   "category": "Audio"
+  },
+  {
+   "path": "Audio/SFX/SFX_Recruitment.wav",
+   "size": null,
+   "category": "Audio"
+  },
+  {
+   "path": "Audio/SFX/SFX_Recruitment.ogg",
+   "size": null,
+   "category": "Audio"
+  },
+  {
+   "path": "Audio/SFX/SFX_Trophy.wav",
+   "size": null,
+   "category": "Audio"
+  },
+  {
+   "path": "Audio/SFX/SFX_Trophy.ogg",
+   "size": null,
+   "category": "Audio"
+  },
+  {
+   "path": "Audio/BGM/BGM_Main_Menu.wav",
+   "size": null,
+   "category": "Audio"
+  },
+  {
+   "path": "Audio/BGM/BGM_Main_Menu.ogg",
+   "size": null,
+   "category": "Audio"
+  },
+  {
+   "path": "Audio/BGM/BGM_Training.wav",
+   "size": null,
+   "category": "Audio"
+  },
+  {
+   "path": "Audio/BGM/BGM_Training.ogg",
+   "size": null,
+   "category": "Audio"
+  },
+  {
+   "path": "Audio/BGM/BGM_Match.wav",
+   "size": null,
+   "category": "Audio"
+  },
+  {
+   "path": "Audio/BGM/BGM_Match.ogg",
+   "size": null,
+   "category": "Audio"
+  },
+  {
+   "path": "Audio/BGM/BGM_Tournament.wav",
+   "size": null,
+   "category": "Audio"
+  },
+  {
+   "path": "Audio/BGM/BGM_Tournament.ogg",
+   "size": null,
+   "category": "Audio"
+  },
+  {
+   "path": "Audio/BGM/BGM_Victory.wav",
+   "size": null,
+   "category": "Audio"
+  },
+  {
+   "path": "Audio/BGM/BGM_Victory.ogg",
+   "size": null,
+   "category": "Audio"
+  },
+  {
+   "path": "Audio/BGM/BGM_Defeat.wav",
+   "size": null,
+   "category": "Audio"
+  },
+  {
+   "path": "Audio/BGM/BGM_Defeat.ogg",
+   "size": null,
+   "category": "Audio"
+  },
+  {
+   "path": "Audio/BGM/BGM_Shop.wav",
+   "size": null,
+   "category": "Audio"
+  },
+  {
+   "path": "Audio/BGM/BGM_Shop.ogg",
+   "size": null,
+   "category": "Audio"
+  },
+  {
+   "path": "Audio/audio_meta.json",
+   "size": null,
+   "category": "Data"
+  }
+ ]
+}

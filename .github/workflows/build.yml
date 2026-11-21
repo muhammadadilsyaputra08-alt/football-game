@@ -1,0 +1,171 @@
+name: Build Pixel Soccer Cozy
+
+on:
+  push:
+    branches: [ main, master, develop, alpha ]
+  pull_request:
+    branches: [ main, master, develop ]
+  workflow_dispatch:
+
+env:
+  JAVA_VERSION: '17'
+  GRADLE_OPTS: '-Dorg.gradle.daemon=false -Dorg.gradle.jvmargs=-Xmx2g'
+
+jobs:
+  # ------------------------------------------------------------
+  # 1. Compile Core + Desktop (tanpa Android SDK)
+  # ------------------------------------------------------------
+  build-desktop:
+    name: Build Desktop (Java)
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup JDK ${{ env.JAVA_VERSION }}
+        uses: actions/setup-java@v4
+        with:
+          java-version: ${{ env.JAVA_VERSION }}
+          distribution: 'temurin'
+          cache: 'gradle'
+
+      - name: Setup Gradle
+        uses: gradle/actions/setup-gradle@v3
+        with:
+          gradle-version: '8.5'
+
+      - name: Make gradlew executable (if present)
+        run: |
+          if [ -f ./gradlew ]; then
+            chmod +x ./gradlew
+          fi
+
+      - name: Compile Core module
+        run: |
+          # Gunakan gradle langsung jika wrapper belum ada
+          if [ -f ./gradlew ]; then
+            ./gradlew :core:compileJava --no-daemon --stacktrace
+          else
+            gradle :core:compileJava --no-daemon --stacktrace
+          fi
+
+      - name: Compile Desktop module
+        run: |
+          if [ -f ./gradlew ]; then
+            ./gradlew :desktop:compileJava --no-daemon --stacktrace
+          else
+            gradle :desktop:compileJava --no-daemon --stacktrace
+          fi
+
+      - name: Package Desktop JAR
+        run: |
+          if [ -f ./gradlew ]; then
+            ./gradlew :desktop:dist --no-daemon --stacktrace
+          else
+            gradle :desktop:dist --no-daemon --stacktrace
+          fi
+        continue-on-error: true
+
+      - name: Upload Desktop JAR
+        uses: actions/upload-artifact@v4
+        if: success()
+        with:
+          name: desktop-jar
+          path: |
+            desktop/build/libs/*.jar
+          retention-days: 14
+          if-no-files-found: warn
+
+      - name: List build outputs
+        run: |
+          echo "=== Build tree ==="
+          find . -path '*/build/*' -name '*.jar' -o -path '*/build/classes/*' 2>/dev/null | head -40 || true
+
+  # ------------------------------------------------------------
+  # 2. Python AI checks
+  # ------------------------------------------------------------
+  test-python-ai:
+    name: Test Python AI
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Run AI demo
+        run: |
+          python ai_python/match_ai.py --demo
+          python ai_python/balance_tool.py
+
+  # ------------------------------------------------------------
+  # 3. Build Android APK (opsional, butuh SDK)
+  # ------------------------------------------------------------
+  build-android:
+    name: Build Android APK
+    runs-on: ubuntu-latest
+    needs: [build-desktop]
+    # Hanya jalan jika ada secret atau manual dispatch
+    # if: github.event_name == 'workflow_dispatch'
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup JDK ${{ env.JAVA_VERSION }}
+        uses: actions/setup-java@v4
+        with:
+          java-version: ${{ env.JAVA_VERSION }}
+          distribution: 'temurin'
+          cache: 'gradle'
+
+      - name: Setup Android SDK
+        uses: android-actions/setup-android@v3
+
+      - name: Accept Android licenses
+        run: |
+          yes | sdkmanager --licenses || true
+
+      - name: Setup Gradle
+        uses: gradle/actions/setup-gradle@v3
+        with:
+          gradle-version: '8.5'
+
+      - name: Assemble Debug APK
+        run: |
+          if [ -f ./gradlew ]; then
+            chmod +x ./gradlew
+            ./gradlew :android:assembleDebug --no-daemon --stacktrace
+          else
+            gradle :android:assembleDebug --no-daemon --stacktrace
+          fi
+        continue-on-error: true
+
+      - name: Upload APK
+        uses: actions/upload-artifact@v4
+        if: success()
+        with:
+          name: android-apk
+          path: |
+            android/build/outputs/apk/**/*.apk
+          retention-days: 14
+          if-no-files-found: warn
+
+  # ------------------------------------------------------------
+  # 4. Summary
+  # ------------------------------------------------------------
+  summary:
+    name: Build Summary
+    runs-on: ubuntu-latest
+    needs: [build-desktop, test-python-ai, build-android]
+    if: always()
+    steps:
+      - name: Status
+        run: |
+          echo "Desktop build : ${{ needs.build-desktop.result }}"
+          echo "Python AI     : ${{ needs.test-python-ai.result }}"
+          echo "Android APK   : ${{ needs.build-android.result }}"
+          echo ""
+          echo "Pixel Soccer: Cozy Football — Alpha CI"

@@ -1,0 +1,37 @@
+{
+ "goal_left": {
+  "sprite": [
+   28,
+   84
+  ],
+  "net_trigger": [
+   6,
+   8,
+   22,
+   68
+  ],
+  "posts": [
+   [
+    2,
+    4,
+    4,
+    76
+   ],
+   [
+    2,
+    76,
+    22,
+    4
+   ]
+  ],
+  "crossbar": [
+   2,
+   4,
+   26,
+   3
+  ],
+  "goal_line_x": 6
+ },
+ "goal_right": "mirror x",
+ "note": "Koordinat relatif sprite 28x84; tiap frame 30x86 di sheet NetAnim."
+}

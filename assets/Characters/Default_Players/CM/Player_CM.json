@@ -1,0 +1,321 @@
+{
+ "cell": [
+  32,
+  32
+ ],
+ "pivot": [
+  16,
+  28
+ ],
+ "rows": [
+  {
+   "name": "idle_down",
+   "frames": 2,
+   "row": 0,
+   "loop": true,
+   "fps": 4
+  },
+  {
+   "name": "idle_up",
+   "frames": 2,
+   "row": 1,
+   "loop": true,
+   "fps": 4
+  },
+  {
+   "name": "idle_left",
+   "frames": 2,
+   "row": 2,
+   "loop": true,
+   "fps": 4
+  },
+  {
+   "name": "idle_right",
+   "frames": 2,
+   "row": 3,
+   "loop": true,
+   "fps": 4
+  },
+  {
+   "name": "walk_down",
+   "frames": 4,
+   "row": 4,
+   "loop": true,
+   "fps": 8
+  },
+  {
+   "name": "walk_up",
+   "frames": 4,
+   "row": 5,
+   "loop": true,
+   "fps": 8
+  },
+  {
+   "name": "walk_left",
+   "frames": 4,
+   "row": 6,
+   "loop": true,
+   "fps": 8
+  },
+  {
+   "name": "walk_right",
+   "frames": 4,
+   "row": 7,
+   "loop": true,
+   "fps": 8
+  },
+  {
+   "name": "run_down",
+   "frames": 4,
+   "row": 8,
+   "loop": true,
+   "fps": 10
+  },
+  {
+   "name": "run_up",
+   "frames": 4,
+   "row": 9,
+   "loop": true,
+   "fps": 10
+  },
+  {
+   "name": "run_left",
+   "frames": 4,
+   "row": 10,
+   "loop": true,
+   "fps": 10
+  },
+  {
+   "name": "run_right",
+   "frames": 4,
+   "row": 11,
+   "loop": true,
+   "fps": 10
+  },
+  {
+   "name": "sprint_down",
+   "frames": 4,
+   "row": 12,
+   "loop": true,
+   "fps": 14
+  },
+  {
+   "name": "sprint_up",
+   "frames": 4,
+   "row": 13,
+   "loop": true,
+   "fps": 14
+  },
+  {
+   "name": "sprint_left",
+   "frames": 4,
+   "row": 14,
+   "loop": true,
+   "fps": 14
+  },
+  {
+   "name": "sprint_right",
+   "frames": 4,
+   "row": 15,
+   "loop": true,
+   "fps": 14
+  },
+  {
+   "name": "dribble_down",
+   "frames": 4,
+   "row": 16,
+   "loop": true,
+   "fps": 10
+  },
+  {
+   "name": "dribble_up",
+   "frames": 4,
+   "row": 17,
+   "loop": true,
+   "fps": 10
+  },
+  {
+   "name": "dribble_left",
+   "frames": 4,
+   "row": 18,
+   "loop": true,
+   "fps": 10
+  },
+  {
+   "name": "dribble_right",
+   "frames": 4,
+   "row": 19,
+   "loop": true,
+   "fps": 10
+  },
+  {
+   "name": "pass_down",
+   "frames": 3,
+   "row": 20,
+   "loop": false,
+   "fps": 12
+  },
+  {
+   "name": "pass_up",
+   "frames": 3,
+   "row": 21,
+   "loop": false,
+   "fps": 12
+  },
+  {
+   "name": "pass_left",
+   "frames": 3,
+   "row": 22,
+   "loop": false,
+   "fps": 12
+  },
+  {
+   "name": "pass_right",
+   "frames": 3,
+   "row": 23,
+   "loop": false,
+   "fps": 12
+  },
+  {
+   "name": "shoot_down",
+   "frames": 4,
+   "row": 24,
+   "loop": false,
+   "fps": 12
+  },
+  {
+   "name": "shoot_up",
+   "frames": 4,
+   "row": 25,
+   "loop": false,
+   "fps": 12
+  },
+  {
+   "name": "shoot_left",
+   "frames": 4,
+   "row": 26,
+   "loop": false,
+   "fps": 12
+  },
+  {
+   "name": "shoot_right",
+   "frames": 4,
+   "row": 27,
+   "loop": false,
+   "fps": 12
+  },
+  {
+   "name": "tackle_down",
+   "frames": 3,
+   "row": 28,
+   "loop": false,
+   "fps": 10
+  },
+  {
+   "name": "tackle_up",
+   "frames": 3,
+   "row": 29,
+   "loop": false,
+   "fps": 10
+  },
+  {
+   "name": "tackle_left",
+   "frames": 3,
+   "row": 30,
+   "loop": false,
+   "fps": 10
+  },
+  {
+   "name": "tackle_right",
+   "frames": 3,
+   "row": 31,
+   "loop": false,
+   "fps": 10
+  },
+  {
+   "name": "receive_down",
+   "frames": 3,
+   "row": 32,
+   "loop": false,
+   "fps": 8
+  },
+  {
+   "name": "receive_up",
+   "frames": 3,
+   "row": 33,
+   "loop": false,
+   "fps": 8
+  },
+  {
+   "name": "receive_left",
+   "frames": 3,
+   "row": 34,
+   "loop": false,
+   "fps": 8
+  },
+  {
+   "name": "receive_right",
+   "frames": 3,
+   "row": 35,
+   "loop": false,
+   "fps": 8
+  },
+  {
+   "name": "turn_down",
+   "frames": 2,
+   "row": 36,
+   "loop": false,
+   "fps": 8
+  },
+  {
+   "name": "turn_up",
+   "frames": 2,
+   "row": 37,
+   "loop": false,
+   "fps": 8
+  },
+  {
+   "name": "turn_left",
+   "frames": 2,
+   "row": 38,
+   "loop": false,
+   "fps": 8
+  },
+  {
+   "name": "turn_right",
+   "frames": 2,
+   "row": 39,
+   "loop": false,
+   "fps": 8
+  },
+  {
+   "name": "celebrate",
+   "frames": 4,
+   "row": 40,
+   "loop": true,
+   "fps": 8
+  },
+  {
+   "name": "victory",
+   "frames": 2,
+   "row": 41,
+   "loop": true,
+   "fps": 6
+  },
+  {
+   "name": "defeat",
+   "frames": 2,
+   "row": 42,
+   "loop": true,
+   "fps": 4
+  },
+  {
+   "name": "fall",
+   "frames": 3,
+   "row": 43,
+   "loop": false,
+   "fps": 8
+  }
+ ],
+ "notes": "Arah left = flipX dari right (sudah dirender). Pivot = (16,28) kaki. Filter: Nearest."
+}

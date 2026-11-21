@@ -1,0 +1,153 @@
+{
+ "cell": [
+  32,
+  32
+ ],
+ "pivot": [
+  16,
+  28
+ ],
+ "rows": [
+  {
+   "name": "GK_idle_down",
+   "frames": 2,
+   "row": 0,
+   "loop": true,
+   "fps": 4
+  },
+  {
+   "name": "GK_idle_up",
+   "frames": 2,
+   "row": 1,
+   "loop": true,
+   "fps": 4
+  },
+  {
+   "name": "GK_idle_left",
+   "frames": 2,
+   "row": 2,
+   "loop": true,
+   "fps": 4
+  },
+  {
+   "name": "GK_idle_right",
+   "frames": 2,
+   "row": 3,
+   "loop": true,
+   "fps": 4
+  },
+  {
+   "name": "GK_move_down",
+   "frames": 4,
+   "row": 4,
+   "loop": true,
+   "fps": 8
+  },
+  {
+   "name": "GK_move_up",
+   "frames": 4,
+   "row": 5,
+   "loop": true,
+   "fps": 8
+  },
+  {
+   "name": "GK_move_left",
+   "frames": 4,
+   "row": 6,
+   "loop": true,
+   "fps": 8
+  },
+  {
+   "name": "GK_move_right",
+   "frames": 4,
+   "row": 7,
+   "loop": true,
+   "fps": 8
+  },
+  {
+   "name": "GK_jump_left",
+   "frames": 3,
+   "row": 8,
+   "loop": false,
+   "fps": 10
+  },
+  {
+   "name": "GK_jump_right",
+   "frames": 3,
+   "row": 9,
+   "loop": false,
+   "fps": 10
+  },
+  {
+   "name": "GK_catch_left",
+   "frames": 3,
+   "row": 10,
+   "loop": false,
+   "fps": 10
+  },
+  {
+   "name": "GK_catch_right",
+   "frames": 3,
+   "row": 11,
+   "loop": false,
+   "fps": 10
+  },
+  {
+   "name": "GK_punch_left",
+   "frames": 3,
+   "row": 12,
+   "loop": false,
+   "fps": 12
+  },
+  {
+   "name": "GK_punch_right",
+   "frames": 3,
+   "row": 13,
+   "loop": false,
+   "fps": 12
+  },
+  {
+   "name": "GK_kick_left",
+   "frames": 3,
+   "row": 14,
+   "loop": false,
+   "fps": 12
+  },
+  {
+   "name": "GK_kick_right",
+   "frames": 3,
+   "row": 15,
+   "loop": false,
+   "fps": 12
+  },
+  {
+   "name": "GK_dive_left",
+   "frames": 3,
+   "row": 16,
+   "loop": false,
+   "fps": 8
+  },
+  {
+   "name": "GK_dive_right",
+   "frames": 3,
+   "row": 17,
+   "loop": false,
+   "fps": 8
+  },
+  {
+   "name": "GK_get_up",
+   "frames": 3,
+   "row": 18,
+   "loop": false,
+   "fps": 8
+  },
+  {
+   "name": "GK_celebrate",
+   "frames": 4,
+   "row": 19,
+   "loop": false,
+   "fps": 8
+  }
+ ],
+ "notes": "Arah left = flipX dari right (sudah dirender). Pivot = (16,28) kaki. Filter: Nearest."
+}

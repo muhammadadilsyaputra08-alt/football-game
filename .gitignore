@@ -1,0 +1,37 @@
+# Gradle
+.gradle/
+build/
+*/build/
+local.properties
+*.iml
+.idea/
+*.ipr
+*.iws
+
+# Android
+android/libs/
+android/.cxx/
+*.apk
+*.aab
+*.ap_
+*.dex
+
+# LibGDX
+assets/CozyPixelSoccer/Audio/BGM/*.wav
+# keep ogg if smaller
+
+# OS
+.DS_Store
+Thumbs.db
+*~
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# Saves
+cozysoccer_save.json
+
+# Logs
+*.log

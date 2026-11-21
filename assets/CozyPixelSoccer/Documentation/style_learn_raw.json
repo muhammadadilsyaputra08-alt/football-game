@@ -1,0 +1,65 @@
+{
+  "style_profile": {
+    "id": "cozy_topdown_v1",
+    "name": "cozy_topdown",
+    "version": 1,
+    "resolution": 352,
+    "description": "Auto-extracted from /mnt/user-data/uploads/top-down-pack-2.png",
+    "created_at": "2026-11-21T09:07:00.979470+00:00",
+    "palette": {
+      "max_colors": 0,
+      "colors": [],
+      "outline_color": "#000000",
+      "highlight_color": null,
+      "shadow_color": null
+    },
+    "outline": {
+      "thickness": 2,
+      "style": "full_dark",
+      "anti_aliasing": false,
+      "internal_outline_usage": "high",
+      "coverage_target": 0.507
+    },
+    "shading": {
+      "levels": 4,
+      "light_direction": "top_left",
+      "dithering_level": 0.1,
+      "shadow_hue_bias": "cool",
+      "highlight_hue_bias": "warm",
+      "avoid": [
+        "pillow_shading",
+        "banding"
+      ]
+    },
+    "shape": {
+      "silhouette": "medium",
+      "detail_density": 0.45,
+      "edge_style": "clean_stairstep"
+    },
+    "animation": {
+      "frame_alignment": "strict",
+      "palette_lock": true,
+      "outline_lock": true,
+      "pivot_stability": true
+    },
+    "ramps": [],
+    "source_analysis": {
+      "grid": {
+        "canvas_size": [
+          352,
+          288
+        ],
+        "detected_base_resolution": [
+          352,
+          288
+        ],
+        "upscale_factor": 1,
+        "grid_alignment": "perfect",
+        "anti_aliasing_detected": false,
+        "pixel_perfect_score": 0.95
+      },
+      "pixel_perfect_score": 0.95,
+      "source": "/mnt/user-data/uploads/top-down-pack-2.png"
+    }
+  }
+}

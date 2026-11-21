@@ -1,0 +1,172 @@
+{
+ "roster": [
+  {
+   "id": "GK",
+   "name": "Bima",
+   "pos": "GK",
+   "job": "Goalkeeper",
+   "num": 1,
+   "hair": "black",
+   "style": "short",
+   "skin": "s3"
+  },
+  {
+   "id": "RB",
+   "name": "Raka",
+   "pos": "RB",
+   "job": "Right Back",
+   "num": 2,
+   "hair": "brown",
+   "style": "short",
+   "skin": "s2"
+  },
+  {
+   "id": "CB1",
+   "name": "Dimas",
+   "pos": "CB",
+   "job": "Center Back",
+   "num": 3,
+   "hair": "black",
+   "style": "bob",
+   "skin": "s3"
+  },
+  {
+   "id": "CB2",
+   "name": "Arga",
+   "pos": "CB",
+   "job": "Center Back",
+   "num": 4,
+   "hair": "brown",
+   "style": "spiky",
+   "skin": "s4"
+  },
+  {
+   "id": "LB",
+   "name": "Fajar",
+   "pos": "LB",
+   "job": "Left Back",
+   "num": 5,
+   "hair": "olive",
+   "style": "short",
+   "skin": "s1"
+  },
+  {
+   "id": "CDM",
+   "name": "Galih",
+   "pos": "CDM",
+   "job": "Defensive Midfielder",
+   "num": 6,
+   "hair": "brown",
+   "style": "round",
+   "skin": "s2"
+  },
+  {
+   "id": "CM",
+   "name": "Nando",
+   "pos": "CM",
+   "job": "Central Midfielder",
+   "num": 8,
+   "hair": "ginger",
+   "style": "fringe",
+   "skin": "s1"
+  },
+  {
+   "id": "CAM",
+   "name": "Yoga",
+   "pos": "CAM",
+   "job": "Attacking Midfielder",
+   "num": 10,
+   "hair": "blonde",
+   "style": "fringe",
+   "skin": "s2"
+  },
+  {
+   "id": "RW",
+   "name": "Satria",
+   "pos": "RW",
+   "job": "Right Winger",
+   "num": 7,
+   "hair": "sage",
+   "style": "spiky",
+   "skin": "s3"
+  },
+  {
+   "id": "ST",
+   "name": "Bagas",
+   "pos": "ST",
+   "job": "Striker",
+   "num": 9,
+   "hair": "ginger",
+   "style": "spiky",
+   "skin": "s1"
+  },
+  {
+   "id": "LW",
+   "name": "Tio",
+   "pos": "LW",
+   "job": "Left Winger",
+   "num": 11,
+   "hair": "rust",
+   "style": "mohawk",
+   "skin": "s4"
+  }
+ ],
+ "recruits": [
+  {
+   "id": "Leon",
+   "name": "Leon",
+   "title": "The Guardian",
+   "rarity": "Rare",
+   "pos": "GK",
+   "job": "Goalkeeper",
+   "num": 1,
+   "stats": {
+    "Reflex": 86,
+    "Handling": 79
+   },
+   "maxlv": 18,
+   "passive": "Last Hope",
+   "price": 1200
+  },
+  {
+   "id": "Rafael",
+   "name": "Rafael",
+   "title": "The Sniper",
+   "rarity": "Epic",
+   "pos": "ST",
+   "job": "Striker",
+   "num": 9,
+   "stats": {
+    "Shooting": 91,
+    "Pace": 82
+   },
+   "maxlv": 20,
+   "passive": "Sniper",
+   "price": 2500,
+   "headband": true,
+   "hb_col": [
+    186,
+    190,
+    133,
+    255
+   ]
+  },
+  {
+   "id": "Kai",
+   "name": "Kai",
+   "title": "The Maestro",
+   "rarity": "Legendary",
+   "pos": "CAM",
+   "job": "Attacking Midfielder",
+   "num": 10,
+   "stats": {
+    "Passing": 94,
+    "Dribbling": 90
+   },
+   "maxlv": 20,
+   "passive": "Playmaker",
+   "price": 4000,
+   "band": true
+  }
+ ]
+}

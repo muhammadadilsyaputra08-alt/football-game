@@ -1,0 +1,74 @@
+{
+ "name": "cozy_topdown_v1",
+ "source": "top-down-pack-2.png",
+ "resolution_policy": {
+  "player_sprite": "32x32 (badan ~20x26, kepala besar chibi)",
+  "portrait": "64x64",
+  "icon": "16x16",
+  "tile": "16x16",
+  "filter": "nearest",
+  "scale": "integer"
+ },
+ "outline": {
+  "color": "#390c14",
+  "thickness": 1,
+  "type": "silhouette_dark_maroon (bukan hitam murni)"
+ },
+ "shading": {
+  "levels": 3,
+  "light": "top_left",
+  "hue_shift": "shadow->warm-dark/rust, highlight->cream/yellow"
+ },
+ "palette_reference": [
+  "#390c14",
+  "#fba74e",
+  "#fff4b0",
+  "#f4893d",
+  "#ebda8d",
+  "#fcba62",
+  "#817b1a",
+  "#ac4427",
+  "#677a5d",
+  "#465544",
+  "#4d2c17",
+  "#5f521a",
+  "#d96624",
+  "#a4a51e",
+  "#babe85",
+  "#83391d",
+  "#c64e2c",
+  "#ef6544",
+  "#db9421",
+  "#b65f21",
+  "#71441c",
+  "#957128",
+  "#8a9c73",
+  "#2a3636"
+ ],
+ "palette_extensions": {
+  "grass_soft_green": [
+   "#a8b96e",
+   "#8fa35c",
+   "#869a55",
+   "#6c8045",
+   "#566a38"
+  ],
+  "rarity": {
+   "Rare": "#5f9ea8",
+   "Epic": "#9a4a7a",
+   "Legendary": "#ffbc30"
+  },
+  "skin_variants": "s2-s4"
+ },
+ "character_rules": {
+  "eyes": "3x3 px: kelopak coklat, putih krem, iris hijau-olive, pupil maroon",
+  "brow": "tebal 4px coklat tua",
+  "proportion": "kepala 18x12, badan 10x6, kaki 3px",
+  "faces": [
+   "down",
+   "up",
+   "left(flip)",
+   "right"
+  ]
+ }
+}

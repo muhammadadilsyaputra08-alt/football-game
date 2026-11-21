@@ -1,0 +1,12 @@
+{
+ "frames": [
+  "idle_down",
+  "run_right_1",
+  "run_right_2",
+  "idle_up"
+ ],
+ "cell": [
+  32,
+  32
+ ]
+}

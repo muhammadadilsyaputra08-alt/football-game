@@ -56,3 +56,9 @@
 - Training tidak butuh energi.
 - Shop rotasi setelah turnamen (alpha: stok tetap 3 pemain).
 - Offline total, local save.
+
+## Perbaikan CI & Ikon (21 Nov 2026)
+- **Desktop `:desktop:dist`**: gagal "Cannot expand ZIP core-0.1.0-alpha.jar" → task `dist` kini `dependsOn ':core:jar'`.
+- **Android CI**: `android-actions/setup-android@v3` gagal (`sdkmanager tools` → "Failed to find package 'tools'") → diganti SDK bawaan runner + `platforms;android-34`.
+- `continue-on-error` dihapus dari packaging/APK agar kegagalan tidak tersembunyi; `gradlew` + wrapper jar ditambahkan.
+- Ikon app baru (pixel art, palet STYLE_DNA): `Branding/App_Icon_*`, `android/res/mipmap-*` (adaptive, round, monochrome), ikon window desktop.

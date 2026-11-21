@@ -15,6 +15,10 @@ public class DesktopLauncher {
         config.useVsync(true);
         config.setForegroundFPS(60);
         config.setResizable(true);
+        config.setWindowIcon(
+            "CozyPixelSoccer/Branding/App_Icon_128.png",
+            "CozyPixelSoccer/Branding/App_Icon_64.png",
+            "CozyPixelSoccer/Branding/App_Icon_32.png");
         new Lwjgl3Application(new PixelSoccerGame(), config);
     }
 }

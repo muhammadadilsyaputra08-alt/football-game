@@ -83,14 +83,17 @@ project(':desktop') {
 
     // Package jar
     tasks.register('dist', Jar) {
-        dependsOn classes
+        // FIX: runtimeClasspath memuat core-<ver>.jar; jar itu harus dibangun
+        // lebih dulu (sebelumnya hanya `classes` => "Cannot expand ZIP ... core-0.1.0-alpha.jar").
+        dependsOn classes, ':core:jar'
         archiveBaseName = project.ext.appName
         archiveVersion = project.version
         from files(sourceSets.main.output.classesDirs)
         from files(sourceSets.main.output.resourcesDir)
         from { configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) } }
-        from files(project(':core').sourceSets.main.output.classesDirs)
         duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+        exclude 'META-INF/*.SF', 'META-INF/*.DSA', 'META-INF/*.RSA'
+        zip64 = true
         manifest {
             attributes 'Main-Class': 'com.cozypixel.soccer.DesktopLauncher'
         }

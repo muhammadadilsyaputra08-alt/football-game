@@ -27,7 +27,6 @@ jobs:
         with:
           java-version: ${{ env.JAVA_VERSION }}
           distribution: 'temurin'
-          cache: 'gradle'
 
       - name: Setup Gradle
         uses: gradle/actions/setup-gradle@v3
@@ -64,7 +63,6 @@ jobs:
           else
             gradle :desktop:dist --no-daemon --stacktrace
           fi
-        continue-on-error: true
 
       - name: Upload Desktop JAR
         uses: actions/upload-artifact@v4
@@ -119,14 +117,19 @@ jobs:
         with:
           java-version: ${{ env.JAVA_VERSION }}
           distribution: 'temurin'
-          cache: 'gradle'
 
-      - name: Setup Android SDK
-        uses: android-actions/setup-android@v3
-
-      - name: Accept Android licenses
+      # FIX: android-actions/setup-android@v3 menjalankan `sdkmanager tools`
+      # yang sudah tidak ada di cmdline-tools terbaru ("Failed to find package 'tools'").
+      # Runner sudah membawa Android SDK, jadi cukup terima lisensi + pasang platform 34.
+      - name: Setup Android SDK (preinstalled)
         run: |
-          yes | sdkmanager --licenses || true
+          export ANDROID_HOME="${ANDROID_HOME:-${ANDROID_SDK_ROOT:-/usr/local/lib/android/sdk}}"
+          SDKM="$(find "$ANDROID_HOME/cmdline-tools" -path '*/bin/sdkmanager' | sort | tail -n 1)"
+          echo "sdkmanager: $SDKM"
+          yes | "$SDKM" --sdk_root="$ANDROID_HOME" --licenses > /dev/null || true
+          "$SDKM" --sdk_root="$ANDROID_HOME" "platforms;android-34" "build-tools;34.0.0"
+          echo "ANDROID_HOME=$ANDROID_HOME" >> "$GITHUB_ENV"
+          echo "sdk.dir=$ANDROID_HOME" > local.properties
 
       - name: Setup Gradle
         uses: gradle/actions/setup-gradle@v3
@@ -141,7 +144,6 @@ jobs:
           else
             gradle :android:assembleDebug --no-daemon --stacktrace
           fi
-        continue-on-error: true
 
       - name: Upload APK
         uses: actions/upload-artifact@v4

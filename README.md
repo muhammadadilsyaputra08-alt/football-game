@@ -73,7 +73,7 @@ cp -r /path/to/CozyPixelSoccer assets/
 
 | Fitur                    | Status |
 |--------------------------|--------|
-| Core match (top-down)    | ✅     |
+| Core match (top-down)    | ✅ (MatchScreen + MatchEngine) |
 | Joystick + action buttons| ✅     |
 | 11 default players       | ✅     |
 | Formasi 4-3-3, 4-4-2...  | ✅     |
@@ -121,6 +121,14 @@ Pemain bisa:
 
 Dibuat sesuai Game Design Document — Pixel Soccer: Cozy Football.
 Engine: LibGDX + Lua (config) + Python (AI).
+
+## Cara Bermain
+
+Menu → **MAIN PERTANDINGAN** (laga persahabatan) atau **Tournament** (knockout).
+Keyboard: WASD/Panah gerak, Shift lari, J/Spasi tembak (tahan = lebih kuat), K umpan, L umpan terobosan, Q rebut, E ganti pemain, Esc jeda.
+Sentuh: joystick virtual di sisi kiri, tombol aksi di sisi kanan.
+
+Uji logika tanpa grafis: `gradle :core:simulate -PsimArgs="50 65 65"`.
 
 ## GitHub Actions CI
 

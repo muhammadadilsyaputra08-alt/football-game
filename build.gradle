@@ -50,6 +50,15 @@ project(':core') {
 
     sourceSets.main.java.srcDirs = ['src/']
     sourceSets.main.resources.srcDirs = ['assets/']
+
+    // Simulasi headless AI vs AI untuk uji logika/balancing:
+    //   gradle :core:simulate -PsimArgs="50 65 65"   (jumlah laga, kekuatan A, kekuatan B)
+    tasks.register('simulate', JavaExec) {
+        dependsOn classes
+        mainClass = 'com.cozypixel.soccer.engine.MatchSimulator'
+        classpath = sourceSets.main.runtimeClasspath
+        args = (project.findProperty('simArgs') ?: '20').toString().split(' ')
+    }
 }
 
 project(':desktop') {

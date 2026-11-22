@@ -20,6 +20,8 @@ public class MainMenuScreen extends BaseScreen {
         root.add(new Label("PIXEL SOCCER", skin, "title")).colspan(2).padTop(14).row();
         root.add(new Label("Cozy Football", skin)).colspan(2).padBottom(18).row();
 
+        root.add(button("MAIN PERTANDINGAN", new Runnable() { public void run() { go(new MatchSetupScreen(MainMenuScreen.this.game)); } }))
+                .colspan(2).width(300).height(48).pad(6).padBottom(10).row();
         add("Training", new Runnable() { public void run() { go(new TrainingScreen(MainMenuScreen.this.game)); } });
         add("Tournament", new Runnable() { public void run() { go(new TournamentScreen(MainMenuScreen.this.game)); } });
         root.row();

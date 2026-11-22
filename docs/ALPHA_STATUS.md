@@ -68,3 +68,28 @@
 - Skin dibuat sekali di `PixelSoccerGame`; pindah layar lewat `game.go()` (ditunda + dispose layar lama) — tidak ada lagi kebocoran Skin/Stage.
 - Semua layar memakai `BaseScreen` (ExtendViewport, area scroll, tombol Back Android) sehingga konten tidak terpotong.
 - Tombol yang sebelumnya placeholder kini berfungsi: Training (koin + peluang +1 stat), Settings (Sound/Music/Vibration + reset data), Team (kapten, ganti pemain bench), Tournament (peluang menang berdasar OVR tim), Shop/Players (status & pesan jelas).
+
+## Pertandingan Sepak Bola Sungguhan (22 Nov 2026)
+Proyek berubah dari menu berbasis teks menjadi game sepak bola top-down yang bisa dimainkan.
+
+**Baru**
+- `engine/MatchEngine` — mesin laga (tanpa GL, bisa diuji headless): 22 pemain, fisika bola, kontrol bola/dribel,
+  umpan (assist arah), umpan terobosan, tembakan dengan charge, rebut bola, stamina/sprint, kiper (reaksi, menyelam,
+  tangkap/tepis), blok, lemparan ke dalam, tendangan sudut, tendangan gawang, gol, kickoff, turun minum,
+  perpanjangan waktu (golden goal) + adu penalti. AI rule-based (port aturan `ai_python/match_ai.py` ke Java).
+- `engine/Formations` — 4-3-3, 4-4-2, 4-2-3-1, 3-5-2 + penalti posisi; `OpponentFactory` — tim lawan berkekuatan variabel.
+- `screen/MatchScreen` — render lapangan prosedural + dekorasi pack (papan iklan, bunting, gawang, bendera sudut),
+  sprite pemain beranimasi (JSON pack), bola, wasit, VFX (debu, impact, ledakan gol, konfeti), HUD (skor, waktu,
+  stamina, banner GOL), joystick virtual + tombol aksi (asset HUD pack), kontrol keyboard, menu jeda.
+- `MatchSetupScreen` (laga persahabatan, 3 tingkat kesulitan), `MatchResultScreen` (skor, pencetak gol, statistik, hadiah koin).
+- `TournamentScreen` — knockout sungguhan (bagan, tiap babak dimainkan di lapangan), hadiah juara/runner-up/semifinal.
+- `MatchSimulator` — `gradle :core:simulate -PsimArgs="50 65 65"`; rata-rata ~3,3 gol/laga pada tim setara.
+
+**Kontrol**: WASD/Panah gerak, Shift lari, J/Spasi tembak (tahan = kuat), K umpan, L terobosan, Q rebut, E ganti pemain, Esc jeda.
+Sentuh: joystick kiri (muncul di mana pun disentuh di sisi kiri), tombol di kanan.
+
+**Belum / catatan**
+- Belum ada audio (pack tidak menyertakan folder Audio); belum ada pelanggaran/offside/kartu.
+- Tim tidak bertukar sisi di babak kedua; tamu menyerang ke kiri.
+- Turnamen yang sedang berjalan tidak disimpan jika aplikasi ditutup.
+- Mini-game Training masih versi koin + peluang stat (belum interaktif).

@@ -13,6 +13,8 @@ import com.cozypixel.soccer.model.Team;
 import com.cozypixel.soccer.model.Player;
 import com.cozypixel.soccer.util.SaveManager;
 import com.cozypixel.soccer.util.AssetLoader;
+import com.cozypixel.soccer.util.Art;
+import com.cozypixel.soccer.model.TournamentRun;
 import com.cozypixel.soccer.screen.MainMenuScreen;
 import com.cozypixel.soccer.screen.ErrorScreen;
 
@@ -32,6 +34,8 @@ public class PixelSoccerGame extends Game {
     public Team playerTeam;
     public AssetLoader assetLoader;
     public Skin skin;
+    public Art art;                    // cache tekstur/sprite pack CozyPixelSoccer
+    public TournamentRun activeRun;    // turnamen yang sedang berjalan (memori, per sesi)
 
     // Resolusi virtual (landscape)
     public static final int V_WIDTH = 640;
@@ -68,6 +72,7 @@ public class PixelSoccerGame extends Game {
         skin = SkinFactory.create(); // dibuat sekali, dipakai semua layar
         assets = new AssetManager();
         assetLoader = new AssetLoader(assets);
+        art = new Art();
 
         // Load save atau buat baru
         saveData = SaveManager.load();
@@ -170,6 +175,7 @@ public class PixelSoccerGame extends Game {
         saveData = createNewGame();
         SaveManager.save(saveData);
         playerTeam = buildTeamFromSave(saveData);
+        activeRun = null;
     }
 
     public void saveGame() {
@@ -189,5 +195,6 @@ public class PixelSoccerGame extends Game {
         if (font != null) font.dispose();
         if (assets != null) assets.dispose();
         if (skin != null) skin.dispose();
+        if (art != null) art.dispose();
     }
 }
